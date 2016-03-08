@@ -39,13 +39,14 @@
     <link href="<c:url value='/resources/css/slick.css' />" rel="stylesheet"></link>
     <!-- Photo Swipe Image Gallery -->     
     <link href="<c:url value='/resources/css/photoswipe.css' />" rel='stylesheet prefetch'></link>
-    <link href="<c:url value='/resources/css/default-skin.css' />" rel='stylesheet prefetch'></link> 
+    <link href="<c:url value='/resources/css/default-skin.css' />" rel='stylesheet prefetch'></link>
+ 
 
     <!-- Main structure css file -->
     <link href="<c:url value='/resources/css/style.css' />" rel="stylesheet"></link>
    
     <!-- Google fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>  
+    <link href=rvae 'http://fonts.googleapis.com/css?family=Raleway'rel='stylesheet' type='text/css'>  
     <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>   
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:900' rel='stylesheet' type='text/css'>
 
@@ -505,6 +506,7 @@
     <!--=========== End Footer SECTION ================-->
    
     <!-- jQuery Library  -->
+    
     <script src="js/jquery.js"></script>    
     <!-- Bootstrap default js -->
     <script src="js/bootstrap.min.js"></script>
