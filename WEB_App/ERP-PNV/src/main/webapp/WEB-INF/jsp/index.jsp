@@ -11,8 +11,7 @@
 <html lang="en">
   <head>
     <!--=============================================== 
-    Template Design By WpFreeware Team.
-    Author URI : http://www.wpfreeware.com/
+    Template Design By VSHD Team.
     ====================================================-->
 
     <!-- Basic Page Needs
@@ -31,19 +30,19 @@
     <!-- CSS
     ================================================== -->       
     <!-- Bootstrap css file-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<c:url value='/resources/css/bootstrap.min.css' />" rel="stylesheet"></link>
     <!-- Font awesome css file-->
-    <link href="css/font-awesome.min.css" rel="stylesheet">       
+    <link href="<c:url value='/resources/css/font-awesome.min.css' />" rel="stylesheet">       
     <!-- Default Theme css file -->
-    <link id="switcher" href="css/themes/lite-blue-theme.css" rel="stylesheet">   
+    <link id="switcher" href="<c:url value='/resources/css/themes/lite-blue-theme.css' />" rel="stylesheet"></link>  
     <!-- Slick slider css file -->
-    <link href="css/slick.css" rel="stylesheet"> 
+    <link href="<c:url value='/resources/css/slick.css' />" rel="stylesheet"></link>
     <!-- Photo Swipe Image Gallery -->     
-    <link rel='stylesheet prefetch' href='css/photoswipe.css'>
-    <link rel='stylesheet prefetch' href='css/default-skin.css'>    
+    <link href="<c:url value='/resources/css/photoswipe.css' />" rel='stylesheet prefetch'></link>
+    <link href="<c:url value='/resources/css/default-skin.css' />" rel='stylesheet prefetch'></link> 
 
     <!-- Main structure css file -->
-    <link href="style.css" rel="stylesheet">
+    <link href="<c:url value='/resources/css/style.css' />" rel="stylesheet"></link>
    
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>  
