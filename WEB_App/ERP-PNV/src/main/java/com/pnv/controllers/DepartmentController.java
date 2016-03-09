@@ -47,9 +47,9 @@ public class DepartmentController {
         /**
          * Get all titles
          */
-        List<Departments> departments_list = departmentDao.findAll();
-        map.put("departments_list", departments_list);
-        return "department";
+//        List<Departments> departments_list = departmentDao.findAll();
+//        map.put("departments_list", departments_list);
+        return "about_us";
     }
 
     @RequestMapping(value = "/edit", method = RequestMethod.GET)
