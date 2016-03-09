@@ -76,7 +76,7 @@
               <!-- TEXT BASED LOGO -->
               <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i>PN <span>Forum</span></a>               
               <!-- IMG BASED LOGO  -->
-              <!--  <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>   -->                    
+              <!--  <a class="navbar-brand" href="index.html"><img src="resources/images/logresources/images alt="logo"></a>   -->                    
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
@@ -173,7 +173,7 @@
                           <div class="single-blog-right">
                             <div class="blog-img">
                               <figure class="blog-figure">
-                               <a href="#"><img alt="img" src="images/9.jpg"></a>
+                               <a href="#"><img alt="img" src="resources/images/9.jpg"></a>
                                 <span class="image-effect"></span>
                               </figure>
                             </div>
@@ -205,7 +205,7 @@
                           <div class="single-blog-right">
                             <div class="blog-img">
                               <figure class="blog-figure">
-                               <a href="#"><img alt="img" src="images/9.jpg"></a>
+                               <a href="#"><img alt="img" src="resources/images/9.jpg"></a>
                                 <span class="image-effect"></span>
                               </figure>
                             </div>
@@ -237,7 +237,7 @@
                           <div class="single-blog-right">
                             <div class="blog-img">
                               <figure class="blog-figure">
-                               <a href="#"><img alt="img" src="images/9.jpg"></a>
+                               <a href="#"><img alt="img" src="resources/images/9.jpg"></a>
                                 <span class="image-effect"></span>
                               </figure>
                             </div>
@@ -269,7 +269,7 @@
                           <div class="single-blog-right">
                             <div class="blog-img">
                               <figure class="blog-figure">
-                               <a href="#"><img alt="img" src="images/9.jpg"></a>
+                               <a href="#"><img alt="img" src="resources/images/9.jpg"></a>
                                 <span class="image-effect"></span>
                               </figure>
                             </div>
@@ -324,7 +324,7 @@
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#" class="news-img">
-                                    <img alt="img" src="images/small-blog-img1.jpg" class="media-object">
+                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
                                   </a>
                                 </div>
                                 <div class="media-body">
@@ -337,7 +337,7 @@
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#" class="news-img">
-                                    <img alt="img" src="images/small-blog-img2.jpg" class="media-object">
+                                    <img alt="img" src="resources/images/small-blog-img2.jpg" class="media-object">
                                   </a>
                                 </div>
                                 <div class="media-body">
@@ -350,7 +350,7 @@
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#" class="news-img">
-                                    <img alt="img" src="images/small-blog-img1.jpg" class="media-object">
+                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
                                   </a>
                                 </div>
                                 <div class="media-body">
@@ -369,7 +369,7 @@
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#" class="news-img">
-                                    <img alt="img" src="images/small-blog-img1.jpg" class="media-object">
+                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
                                   </a>
                                 </div>
                                 <div class="media-body">
@@ -382,7 +382,7 @@
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#" class="news-img">
-                                    <img alt="img" src="images/small-blog-img2.jpg" class="media-object">
+                                    <img alt="img" src="resources/images/small-blog-img2.jpg" class="media-object">
                                   </a>
                                 </div>
                                 <div class="media-body">
@@ -395,7 +395,7 @@
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#" class="news-img">
-                                    <img alt="img" src="images/small-blog-img1.jpg" class="media-object">
+                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
                                   </a>
                                 </div>
                                 <div class="media-body">

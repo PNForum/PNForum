@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -11,7 +11,6 @@
 
     <!-- Basic Page Needs
     ================================================== -->
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <title>PN Forum : Home</title>
 
@@ -93,8 +92,8 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="fa fa-angle-down"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><ahref="<%=request.getContextPath()%>/login">Sign in</a></li>
-                    <li><ahref="<%=request.getContextPath()%>/about_us">Regiser</a></li>
+                    <li><a href="<%=request.getContextPath()%>/login">Sign in</a></li>
+                    <li><a href="<%=request.getContextPath()%>/about_us">Regiser</a></li>
                     <li><a href="#">Logout</a></li>
                   </ul>
                 </li>

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -268,7 +267,7 @@
             <div class="row-fluid">
 
                 <div class="span3">
-                    <span class="pull-right">©Copyright 2013-2014 <a href="/" title="The Bootstrap Playground">Bootply</a> | <a href="/about#privacy">Privacy</a></span>
+                    <span class="pull-right">Â©Copyright 2013-2014 <a href="/" title="The Bootstrap Playground">Bootply</a> | <a href="/about#privacy">Privacy</a></span>
                 </div>
             </div>
         </footer>
@@ -472,7 +471,7 @@
         <!-- End Quantcast tag -->
         <div id="completeLoginModal" class="modal hide">
             <div class="modal-header">
-                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">×</a>
+                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">Ã—</a>
                  <h3>Do you want to proceed?</h3>
             </div>
             <div class="modal-body">
@@ -489,7 +488,7 @@
         </div>
         <div id="forgotPasswordModal" class="modal hide">
             <div class="modal-header">
-                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">×</a>
+                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">Ã—</a>
                  <h3>Password Lookup</h3>
             </div>
             <div class="modal-body">
@@ -512,7 +511,7 @@
         </div>
         <div id="upgradeModal" class="modal hide">
             <div class="modal-header">
-                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">×</a>
+                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">Ã—</a>
                  <h4>Would you like to upgrade?</h4>
             </div>
             <div class="modal-body">
@@ -528,7 +527,7 @@
         </div>
         <div id="contactModal" class="modal hide">
             <div class="modal-header">
-                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">×</a>
+                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">Ã—</a>
                 <h3>Contact Us</h3>
                 <p>suggestions, questions or feedback</p>
             </div>

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -32,11 +31,11 @@
     <!-- Slick slider css file -->
     <link href="resources/css/slick.css" rel="stylesheet"> 
     <!-- Photo Swipe Image Gallery -->     
-    <link rel='stylesheet prefetch' href='css/photoswipe.css'>
-    <link rel='stylesheet prefetch' href='css/default-skin.css'>    
+    <link rel='stylesheet prefetch' href='resources/css/photoswipe.css'>
+    <link rel='stylesheet prefetch' href='resources/css/default-skin.css'>    
 
     <!-- Main structure css file -->
-    <link href="resources/style.css" rel="stylesheet">
+    <link href="resources/css/style.css" rel="stylesheet">
     <link href="resources/css/stylesheet.css">
    
     <!-- Google fonts -->
