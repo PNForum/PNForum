@@ -1,17 +1,12 @@
-<!-- <%@ include file="./header.jsp" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-
-<h1>Welcome to  our project</h1>
-
-
-
-<%@ include file="./footer.jsp" %>  -->
-
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
   <head>
     <!--=============================================== 
-    Template Design By VSHD Team.
+    Template Design By WpFreeware Team.
+    Author URI : http://www.wpfreeware.com/
     ====================================================-->
 
     <!-- Basic Page Needs
@@ -30,31 +25,25 @@
     <!-- CSS
     ================================================== -->       
     <!-- Bootstrap css file-->
-    <link href="<c:url value='/resources/css/bootstrap.min.css' />" rel="stylesheet"></link>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font awesome css file-->
-    <link href="<c:url value='/resources/css/font-awesome.min.css' />" rel="stylesheet">       
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">       
     <!-- Default Theme css file -->
-    <link id="switcher" href="<c:url value='/resources/css/themes/lite-blue-theme.css' />" rel="stylesheet"></link>  
+    <link id="switcher" href="resources/css/themes/lite-blue-theme.css" rel="stylesheet">   
     <!-- Slick slider css file -->
-    <link href="<c:url value='/resources/css/slick.css' />" rel="stylesheet"></link>
+    <link href="resources/css/slick.css" rel="stylesheet"> 
     <!-- Photo Swipe Image Gallery -->     
-    <link href="<c:url value='/resources/css/photoswipe.css' />" rel='stylesheet prefetch'></link>
-    <link href="<c:url value='/resources/css/default-skin.css' />" rel='stylesheet prefetch'></link>
- 
+    <link rel='stylesheet prefetch' href='resources/css/photoswipe.css'>
+    <link rel='stylesheet prefetch' href='resources/css/default-skin.css'>    
 
     <!-- Main structure css file -->
-    <link href="<c:url value='/resources/css/style.css' />" rel="stylesheet"></link>
+    <link href="resources/css/style.css" rel="stylesheet">
    
     <!-- Google fonts -->
-    <link href= 'http://fonts.googleapis.com/css?family=Raleway'rel='stylesheet' type='text/css'>  
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>  
     <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>   
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:900' rel='stylesheet' type='text/css'>
-    
-    <link href="<c:url value='http://fonts.googleapis.com/css?family=Raleway' />" rel='stylesheet' type='text/css'></link>
-	<link href="<c:url value='http://fonts.googleapis.com/css?family=Habibi' />" rel='stylesheet' type='text/css'></link>
-	<link href="<c:url value='http://fonts.googleapis.com/css?family=Cinzel+Decorative:900' />" rel='stylesheet' type='text/css'></link>
-	
-	
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -125,7 +114,7 @@
         <!-- Start First slide -->
         <div class="top-slide-inner">
           <div class="slider-img">
-            <img src="images/14.jpg" alt="">
+            <img src="resources/images/14.jpg" alt="">
           </div>
         </div>
         <!-- End First slide -->
@@ -133,7 +122,7 @@
         <!-- Start 2nd slide -->
         <div class="top-slide-inner">
           <div class="slider-img">
-            <img src="images/15.jpg" alt="">
+            <img src="resources/images/15.jpg" alt="">
           </div>
 <!--
           <div class="slider-text">
@@ -150,7 +139,7 @@
         <!-- Start Third slide -->
         <div class="top-slide-inner">
           <div class="slider-img">
-            <img src="images/7.jpg" alt="">
+            <img src="resources/images/7.jpg" alt="">
           </div>
         </div>
         <!-- End Third slide -->
@@ -158,7 +147,7 @@
         <!-- Start Fourth slide -->
         <div class="top-slide-inner">
           <div class="slider-img">
-            <img src="images/12.jpg" alt="">
+            <img src="resources/images/12.jpg" alt="">
           </div>
         </div>
         <!-- End Fourth slide -->
@@ -166,7 +155,7 @@
         <!-- Start Fifth slide -->
         <div class="top-slide-inner">
           <div class="slider-img">
-            <img src="images/9.jpg" alt="">
+            <img src="resources/images/9.jpg" alt="">
           </div>
         </div>
         <!-- End Fifth slide -->
@@ -206,7 +195,7 @@
                       <div class="single-blog-right">
                         <div class="blog-img">
                           <figure class="blog-figure">
-                           <a href="#"><img src="images/choose-us-img3.jpg" alt="img"></a>
+                           <a href="#"><img src="resources/images/choose-us-img3.jpg" alt="img"></a>
                             <span class="image-effect"></span>
                           </figure>
                         </div>
@@ -241,7 +230,7 @@
                       <div class="single-blog-right">
                         <div class="blog-img">
                           <figure class="blog-figure">
-                           <a href="#"><img src="images/choose-us-img3.jpg" alt="img"></a>
+                           <a href="#"><img src="resources/images/choose-us-img3.jpg" alt="img"></a>
                             <span class="image-effect"></span>
                           </figure>
                         </div>
@@ -275,7 +264,7 @@
                       <div class="single-blog-right">
                         <div class="blog-img">
                           <figure class="blog-figure">
-                           <a href="#"><img src="images/choose-us-img3.jpg" alt="img"></a>
+                           <a href="#"><img src="resources/images/choose-us-img3.jpg" alt="img"></a>
                             <span class="image-effect"></span>
                           </figure>
                         </div>
@@ -317,7 +306,7 @@
                       <div class="single-blog-right">
                         <div class="blog-img">
                           <figure class="blog-figure">
-                           <a href="#"><img src="images/choose-us-img3.jpg" alt="img"></a>
+                           <a href="#"><img src="resources/images/choose-us-img3.jpg" alt="img"></a>
                             <span class="image-effect"></span>
                           </figure>
                         </div>
@@ -352,7 +341,7 @@
                       <div class="single-blog-right">
                         <div class="blog-img">
                           <figure class="blog-figure">
-                           <a href="#"><img src="images/choose-us-img3.jpg" alt="img"></a>
+                           <a href="#"><img src="resources/images/choose-us-img3.jpg" alt="img"></a>
                             <span class="image-effect"></span>
                           </figure>
                         </div>
@@ -386,7 +375,7 @@
                       <div class="single-blog-right">
                         <div class="blog-img">
                           <figure class="blog-figure">
-                           <a href="#"><img src="images/choose-us-img3.jpg" alt="img"></a>
+                           <a href="#"><img src="resources/images/choose-us-img3.jpg" alt="img"></a>
                             <span class="image-effect"></span>
                           </figure>
                         </div>
@@ -511,38 +500,25 @@
     <!--=========== End Footer SECTION ================-->
    
     <!-- jQuery Library  -->
-    <script src="<c:url value='/resources/js/jquery.js' />"></script>
-    <script src="<c:url value='/resources/js/bootstrap.min.js' />"></script>
-    <script src="<c:url value='/resources/js/slick.min.js' />"></script>
-    <script src="<c:url value='/resources/js/modernizr.custom.79639.js' />"></script>
-    <script src="<c:url value='/resources/js/waypoints.min.js' />"></script>
-    <script src="<c:url value='/resources/js/jquery.counterup.min.js' />"></script>
-    <script src="<c:url value='/resources/js/snap.svg-min.js' />"></script>
-    <script src="<c:url value='/resources/js/hovers.js' />"></script>
-    <script src="<c:url value='/resources/js/photoswipe.min.jss' />"></script>
-    <script src="<c:url value='/resources/js/photoswipe-ui-default.min.js' />"></script>
-     <script src="<c:url value='/resources/js/photoswipe-gallery.js' />"></script>
-    <script src="<c:url value='/resources/js/custom.js' />"></script>
- <%-- <script src="js/jquery.js"></script>    
+    <script src="resources/js/jquery.js"></script>    
     <!-- Bootstrap default js -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
     <!-- slick slider -->
-    <script src="js/slick.min.js"></script>    
-    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>      
+    <script src="resources/js/slick.min.js"></script>    
+    <script type="text/javascript" src="resources/js/modernizr.custom.79639.js"></script>      
     <!-- counter -->
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
+    <script src="resources/js/waypoints.min.js"></script>
+    <script src="resources/js/jquery.counterup.min.js"></script>
     <!-- Doctors hover effect -->
-    <script src="js/snap.svg-min.js"></script>
-    <script src="js/hovers.js"></script>
+    <script src="resources/js/snap.svg-min.js"></script>
+    <script src="resources/js/hovers.js"></script>
     <!-- Photo Swipe Gallery Slider -->
-    <script src='js/photoswipe.min.js'></script>
-    <script src='js/photoswipe-ui-default.min.js'></script>    
-    <script src="js/photoswipe-gallery.js"></script>
+    <script src='resources/js/photoswipe.min.js'></script>
+    <script src='resources/js/photoswipe-ui-default.min.js'></script>    
+    <script src="resources/js/photoswipe-gallery.js"></script>
 
     <!-- Custom JS -->
-    <script src="js/custom.js"></script> --%>
- 
+    <script src="resources/js/custom.js"></script>
       <script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",37282]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>
   </body>
 </html>

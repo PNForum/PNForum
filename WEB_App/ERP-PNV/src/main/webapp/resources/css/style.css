@@ -38,7 +38,7 @@ body,html{
   overflow-x:hidden;
 }
 body {
-font-family: initial;
+font-family: 'Habibi', serif;
 overflow-x: hidden !important;
 }
 
@@ -62,7 +62,7 @@ h3,
 h4,
 h5,
 h6{
-	font-family: initial;	
+	font-family: 'Raleway', sans-serif;	
 }
 h2 {
   color: #313338;  
