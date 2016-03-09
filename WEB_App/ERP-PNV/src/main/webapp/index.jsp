@@ -1,4 +1,8 @@
-
+ <%--  <!-- BEGAIN PRELOADER -->
+    <div id="preloader">
+      <div id="status">&nbsp;</div>
+    </div>
+    <!-- END PRELOADER -->--%> 
 
 <%-- <!-- <%@ include file="./header.jsp" %>
 
@@ -47,25 +51,12 @@
     <link href="<c:url value='/resources/css/style.css' />" rel="stylesheet"></link>
     
     <!-- Google fonts -->
-    <link href= 'http://fonts.googleapis.com/css?family=Raleway'rel='stylesheet' type='text/css'>  
-    <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>   
-    <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:900' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]--> 
+    
+    <link href="<c:url value='http://fonts.googleapis.com/css?family=Raleway' />" rel='stylesheet' type='text/css'></link>
+	<link href="<c:url value='http://fonts.googleapis.com/css?family=Habibi' />" rel='stylesheet' type='text/css'></link>
+	<link href="<c:url value='http://fonts.googleapis.com/css?family=Cinzel+Decorative:900' />" rel='stylesheet' type='text/css'></link>
   </head>
   <body>  
-  <%--  <!-- BEGAIN PRELOADER -->
-    <div id="preloader">
-      <div id="status">&nbsp;</div>
-    </div>
-    <!-- END PRELOADER -->--%>>  
-   
-
     <!-- SCROLL TOP BUTTON -->
      <a class="scrollToTop" href="#"><i class="fa fa-hand-o-up"></i></a>
     <!-- END SCROLL TOP BUTTON -->
