@@ -46,7 +46,7 @@
     <link href="<c:url value='/resources/css/style.css' />" rel="stylesheet"></link>
    
     <!-- Google fonts -->
-    <link href=rvae 'http://fonts.googleapis.com/css?family=Raleway'rel='stylesheet' type='text/css'>  
+    <link href= 'http://fonts.googleapis.com/css?family=Raleway'rel='stylesheet' type='text/css'>  
     <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>   
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:900' rel='stylesheet' type='text/css'>
 
@@ -506,8 +506,20 @@
     <!--=========== End Footer SECTION ================-->
    
     <!-- jQuery Library  -->
+    <script href="<c:url value='/resources/js/jquery.js' />"></script>
+    <script href="<c:url value='/resources/js/bootstrap.min.js' />"></script>
+    <script href="<c:url value='/resources/js/slick.min.js' />"></script>
+    <script href="<c:url value='/resources/js/modernizr.custom.79639.js' />"></script>
+    <script href="<c:url value='/resources/js/waypoints.min.js' />"></script>
+    <script href="<c:url value='/resources/js/jquery.counterup.min.js' />"></script>
+    <script href="<c:url value='/resources/js/snap.svg-min.js' />"></script>
+    <script href="<c:url value='/resources/js/hovers.js' />"></script>
+    <script href="<c:url value='/resources/js/photoswipe.min.jss' />"></script>
+    <script href="<c:url value='/resources/js/photoswipe-ui-default.min.js' />"></script>
+     <script href="<c:url value='/resources/js/photoswipe-gallery.js' />"></script>
+    <script href="<c:url value='/resources/js/custom.js' />"></script>
     
-    <script src="js/jquery.js"></script>    
+ <script src="js/jquery.js"></script>    
     <!-- Bootstrap default js -->
     <script src="js/bootstrap.min.js"></script>
     <!-- slick slider -->
@@ -525,7 +537,7 @@
     <script src="js/photoswipe-gallery.js"></script>
 
     <!-- Custom JS -->
-    <script src="js/custom.js"></script>
+    <script src="js/custom.js"></script> 
       <script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",37282]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>
   </body>
 </html>
