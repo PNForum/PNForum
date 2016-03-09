@@ -84,7 +84,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-                <li class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href="<%=request.getContextPath()%>/">Home</a></li>
                 <li><a href="<%=request.getContextPath()%>/discuss">Discuss</a></li>
                 
                 <li><a href="forum.html">Forum</a></li>
@@ -93,7 +93,7 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="fa fa-angle-down"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="<%=request.getContextPath()%>/login">Sign in</a></li>
-                    <li><a href="<%=request.getContextPath()%>/about_us">Regiser</a></li>
+                    <li><a href="<%=request.getContextPath()%>/register">Regiser</a></li>
                     <li><a href="#">Logout</a></li>
                   </ul>
                 </li>

@@ -80,46 +80,22 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="discuss.html">Discuss</a></li>
+                <li><a href="<%=request.getContextPath()%>/">Home</a></li>
+                <li class="active"><a href="<%=request.getContextPath()%>/discuss">Discuss</a></li>
+                
                 <li><a href="forum.html">Forum</a></li>
-                <li><a href="about-us.html">About us</a></li>
+               <li ><a href="<%=request.getContextPath()%>/about_us">About us</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="fa fa-angle-down"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="login.html">Sign in</a></li>
-                    <li><a href="register.html">Regiser</a></li>
+                    <li><a href="<%=request.getContextPath()%>/login">Sign in</a></li>
+                    <li><a href="<%=request.getContextPath()%>/register">Regiser</a></li>
                     <li><a href="#">Logout</a></li>
                   </ul>
                 </li>
                 </ul> 
                         
-            </div><!--/.nav-collapse -->
-<!--
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">News <span class="fa fa-angle-down"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="blog-archive.html">Blog Archive</a></li>
-                    <li><a href="blog-archive-with-left-sidebar.html">Blog Archive with Left Sidebar</a></li>
-                    <li><a href="blog-archive-with-right-sidebar.html">Blog Archive with Right Sidebar</a></li>
-                    <li><a href="blog-single.html">Blog Single</a></li>
-                    <li><a href="blog-single-with-left-sidebar.html">Blog Single with Left Sidebar</a></li>
-                    <li><a href="blog-single-with-right-sidebar.html">Blog Single with Right Sidebar</a></li>           
-                  </ul>
-                </li>
--->
-<!--
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Page <span class="fa fa-angle-down"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="404.html">404 Page</a></li>
-                    <li><a href="#">Link Two</a></li>
-                    <li><a href="#">Link Three</a></li>               
-                  </ul>
-                </li>               
-                <li><a href="contact.html">Contact</a></li>
--->
-                        
+            </div>           
             
           </div>     
         </nav>  
