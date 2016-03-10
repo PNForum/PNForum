@@ -121,7 +121,7 @@ img{
 .scrollToTop {
 	bottom: 30px;
 	display: none;
-	font-size: 20px;
+	font-size: 25px;
 	line-height: 30px;
 	font-weight: bold;
 	height: 30px;
@@ -1671,7 +1671,7 @@ figure.blog-figure:hover .image-effect::before {
 	float: left;
 	display: inline;
 	width: 100%;
-	text-align: right;
+	text-align: center;
 }
 .blog-pagination .pagination > li > a,
 .blog-pagination .pagination > li > span {

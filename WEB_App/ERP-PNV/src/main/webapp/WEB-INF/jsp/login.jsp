@@ -1,9 +1,5 @@
-<<<<<<< HEAD
+
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-=======
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
->>>>>>> origin/master
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -57,12 +53,8 @@
 							<fieldset>
 								<div class="row">
 									<div class="center-block">
-										<img class="profile-img"
-<<<<<<< HEAD
-											src="resources/images/profile-img.png" alt="">
-=======
-											src="images\profile-img.png" alt="">
->>>>>>> origin/master
+										<img class="profile-img" src="resources/images/profile-img.png" alt="">
+
 									</div>
 								</div>
 								<div class="row">

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-=======
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
->>>>>>> origin/master
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -36,19 +31,12 @@
     <!-- Slick slider css file -->
     <link href="resources/css/slick.css" rel="stylesheet"> 
     <!-- Photo Swipe Image Gallery -->     
-<<<<<<< HEAD
     <link rel='stylesheet prefetch' href='resources/css/photoswipe.css'>
     <link rel='stylesheet prefetch' href='resources/css/default-skin.css'>    
 
     <!-- Main structure css file -->
-    <link href="resources/css/style.css" rel="stylesheet">
-=======
-    <link rel='stylesheet prefetch' href='css/photoswipe.css'>
-    <link rel='stylesheet prefetch' href='css/default-skin.css'>    
+    <link href="resources/css/style.css" rel="stylesheet"> 
 
-    <!-- Main structure css file -->
-    <link href="resources/style.css" rel="stylesheet">
->>>>>>> origin/master
     <link href="resources/css/stylesheet.css">
    
     <!-- Google fonts -->
@@ -100,7 +88,6 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-<<<<<<< HEAD
                 <li><a href="<%=request.getContextPath()%>/">Home</a></li>
                 <li><a href="<%=request.getContextPath()%>/discuss">Discuss</a></li>
                 
@@ -111,17 +98,6 @@
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="<%=request.getContextPath()%>/login">Sign in</a></li>
                     <li><a href="<%=request.getContextPath()%>/register">Regiser</a></li>
-=======
-                <li ><a href="index.html">Home</a></li>
-                <li><a href="discuss.html">Discuss</a></li>
-                <li class="active"><a href="forum.html">Forum</a></li>
-                <li><a href="about-us.html">About us</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="fa fa-angle-down"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="login.html">Sign in</a></li>
-                    <li><a href="register.html">Regiser</a></li>
->>>>>>> origin/master
                     <li><a href="#">Logout</a></li>
                   </ul>
                 </li>
@@ -414,9 +390,29 @@
                       </aside>
                     </div>
     </section> 
-
    <!--=========== END QUESTION ================-->  
-   
+                       
+                    <div class="blog-pagination">
+                          <nav>
+                            <ul class="pagination">
+                              <li>
+                                <a href="#" aria-label="Previous">
+                                  <span class="fa fa-angle-left"></span>
+                                </a>
+                              </li>
+                              <li><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li>
+                                <a href="#" aria-label="Next">
+                                  <span class="fa fa-angle-right"></span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
    
     <!--=========== Start Footer SECTION ================-->
     <footer id="footer">
