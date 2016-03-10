@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>    pageEncoding="ISO-8859-1"%>
+=======
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+>>>>>>> origin/master
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -85,6 +90,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+<<<<<<< HEAD
                 <li><a href="<%=request.getContextPath()%>/index">Home</a></li>
                 <li><a href="<%=request.getContextPath()%>/discuss">Discuss</a></li>
                 
@@ -95,6 +101,17 @@
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="<%=request.getContextPath()%>/login">Sign in</a></li>
                     <li><a href="<%=request.getContextPath()%>/register">Regiser</a></li>
+=======
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="discuss.html">Discuss</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                
+              <li><a href="about-us.html">About us</a></li>
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="fa fa-angle-down"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="login.html">Sign in</a></li>
+                    <li><a href="register.html">Regiser</a></li>
+>>>>>>> origin/master
                     <li><a href="#">Logout</a></li>
                   </ul>
                 </li>
@@ -268,7 +285,11 @@
             <div class="row-fluid">
 
                 <div class="span3">
+<<<<<<< HEAD
                     <span class="pull-right">Â©Copyright 2013-2014 <a href="/" title="The Bootstrap Playground">Bootply</a> | <a href="/about#privacy">Privacy</a></span>
+=======
+                    <span class="pull-right">©Copyright 2013-2014 <a href="/" title="The Bootstrap Playground">Bootply</a> | <a href="/about#privacy">Privacy</a></span>
+>>>>>>> origin/master
                 </div>
             </div>
         </footer>
@@ -472,7 +493,11 @@
         <!-- End Quantcast tag -->
         <div id="completeLoginModal" class="modal hide">
             <div class="modal-header">
+<<<<<<< HEAD
                 <a href="#" data-dismiss="modal" aria-hidden="true" class="close">Ã—</a>
+=======
+                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">×</a>
+>>>>>>> origin/master
                  <h3>Do you want to proceed?</h3>
             </div>
             <div class="modal-body">
@@ -489,7 +514,11 @@
         </div>
         <div id="forgotPasswordModal" class="modal hide">
             <div class="modal-header">
+<<<<<<< HEAD
                 <a href="#" data-dismiss="modal" aria-hidden="true" class="close">Ã—</a>
+=======
+                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">×</a>
+>>>>>>> origin/master
                  <h3>Password Lookup</h3>
             </div>
             <div class="modal-body">
@@ -512,7 +541,11 @@
         </div>
         <div id="upgradeModal" class="modal hide">
             <div class="modal-header">
+<<<<<<< HEAD
                 <a href="#" data-dismiss="modal" aria-hidden="true" class="close">Ã—</a>
+=======
+                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">×</a>
+>>>>>>> origin/master
                  <h4>Would you like to upgrade?</h4>
             </div>
             <div class="modal-body">
@@ -528,7 +561,11 @@
         </div>
         <div id="contactModal" class="modal hide">
             <div class="modal-header">
+<<<<<<< HEAD
                 <a href="#" data-dismiss="modal" aria-hidden="true" class="close">Ã—</a>
+=======
+                <a href="#" data-dismiss="modal" aria-hidden="true" class="close">×</a>
+>>>>>>> origin/master
                 <h3>Contact Us</h3>
                 <p>suggestions, questions or feedback</p>
             </div>
