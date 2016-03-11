@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-@Table(name = "departments")
+@Table(name = "loai_tep_tin")
 public class loaiTepTin {
 	@Id
     @GeneratedValue(strategy = IDENTITY)
