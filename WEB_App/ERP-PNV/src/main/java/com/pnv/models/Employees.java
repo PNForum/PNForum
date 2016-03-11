@@ -55,6 +55,7 @@ public class Employees implements java.io.Serializable {
     public Employees() {
     }
 
+    
     public Employees(Departments departments, Titles titles, String empName, String address) {
         this.departments = departments;
         this.titles = titles;
