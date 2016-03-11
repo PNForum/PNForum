@@ -18,7 +18,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name = "employees")
+@Table(name = "dinh_kem")
 
 public class dinhKem implements Serializable{
 
