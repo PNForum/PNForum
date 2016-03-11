@@ -47,8 +47,8 @@ public class DepartmentController {
         /**
          * Get all titles
          */
-//        List<Departments> departments_list = departmentDao.findAll();
-//        map.put("departments_list", departments_list);
+        List<Departments> departments_list = departmentDao.findAll();
+        map.put("departments_list", departments_list);
         return "about_us";
     }
 
