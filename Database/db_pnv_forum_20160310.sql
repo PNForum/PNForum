@@ -1,1 +1,0 @@
-SELECT * FROM db_pnv_forum.bai_dang_hoac_trao_doi;
