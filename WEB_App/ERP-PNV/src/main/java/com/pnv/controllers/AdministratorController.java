@@ -63,4 +63,9 @@ public class AdministratorController {
     public String viewViewProfilePages(ModelMap map) {
         return "view_profile";
     }
+    
+    @RequestMapping(value = "/post", method = RequestMethod.GET)
+    public String viewPostPages(ModelMap map) {
+        return "post";
+    }
 }

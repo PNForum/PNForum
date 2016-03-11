@@ -92,7 +92,7 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="fa fa-angle-down"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="<%=request.getContextPath()%>/login">Sign in</a></li>
+                    <li><a href="<%=request.getContextPath()%>/post">Sign in</a></li>
                     <li><a href="<%=request.getContextPath()%>/register">Regiser</a></li>
                     <li><a href="#">Logout</a></li>
                   </ul>
