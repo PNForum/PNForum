@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 
-public class binhLuan implements java.io.Serializable{
+public class BinhLuan implements java.io.Serializable{
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
@@ -30,12 +30,12 @@ public class binhLuan implements java.io.Serializable{
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_thong_tin_ca_nhan", referencedColumnName = "id", nullable = false)
 	@JsonIgnore
-	private thongTinCaNhan thong_tin_ca_nhan;
+	private ThongTinCaNhan thong_tin_ca_nhan;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_bai_dang_hoac_trao_doi", referencedColumnName = "id", nullable = false)
 	@JsonIgnore
-	private baiDangHoacTraoDoi  bai_dang_hoac_trao_doi;
+	private BaiDangHoacTraoDoi  bai_dang_hoac_trao_doi;
 	
 	@Column(name = "noi_dung", nullable = false, length = 1000)
 	@NotEmpty
@@ -61,11 +61,11 @@ public class binhLuan implements java.io.Serializable{
 	@NotEmpty
 	private Integer is_active;
 
-	public binhLuan() {
+	public BinhLuan() {
 		super();
 	}
 
-	public binhLuan(Integer id, thongTinCaNhan thong_tin_ca_nhan, baiDangHoacTraoDoi bai_dang_hoac_trao_doi,
+	public BinhLuan(Integer id, ThongTinCaNhan thong_tin_ca_nhan, BaiDangHoacTraoDoi bai_dang_hoac_trao_doi,
 			String noi_dung, String ten_nguoi_binh_luan, Boolean binh_luan_con, DateTime ngay, Integer spam,
 			Integer is_active) {
 		super();

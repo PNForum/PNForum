@@ -16,27 +16,27 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "loai_tep_tin")
-public class loaiTepTin {
+public class LoaiTepTin {
 	@Id
     @GeneratedValue(strategy = IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
     private Integer id;
 	
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "loai_tep_tin")
-    private List<dinhKem> dinh_kem;
+    private List<DinhKem> dinh_kem;
     
     @Column(name = "ten_loai_tep", length = 45)
     @NotEmpty
     private String ten_loai_tep;
 
-	public loaiTepTin(Integer id, List<dinhKem> dinh_kem, String ten_loai_tep) {
+	public LoaiTepTin(Integer id, List<DinhKem> dinh_kem, String ten_loai_tep) {
 		super();
 		this.id = id;
 		this.dinh_kem = dinh_kem;
 		this.ten_loai_tep = ten_loai_tep;
 	}
 
-	public loaiTepTin() {
+	public LoaiTepTin() {
 	}
 
 	public Integer getId() {
@@ -47,11 +47,11 @@ public class loaiTepTin {
 		this.id = id;
 	}
 
-	public List<dinhKem> getDinh_kem() {
+	public List<DinhKem> getDinh_kem() {
 		return dinh_kem;
 	}
 
-	public void setDinh_kem(List<dinhKem> dinh_kem) {
+	public void setDinh_kem(List<DinhKem> dinh_kem) {
 		this.dinh_kem = dinh_kem;
 	}
 

@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 @Table(name = "chu_de")
 
-public class chuDe implements java.io.Serializable{
+public class ChuDe implements java.io.Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -29,13 +29,13 @@ public class chuDe implements java.io.Serializable{
 	private String chu_de;
 	
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "chu_de")
-	private List<baiDangHoacTraoDoi> bai_dang_trao_doi;
+	private List<BaiDangHoacTraoDoi> bai_dang_trao_doi;
 
-	public chuDe() {
+	public ChuDe() {
 		super();
 	}
 
-	public chuDe(Integer id, String chu_de, List<baiDangHoacTraoDoi> bai_dang_trao_doi) {
+	public ChuDe(Integer id, String chu_de, List<BaiDangHoacTraoDoi> bai_dang_trao_doi) {
 		super();
 		this.id = id;
 		this.chu_de = chu_de;
@@ -58,11 +58,11 @@ public class chuDe implements java.io.Serializable{
 		this.chu_de = chu_de;
 	}
 
-	public List<baiDangHoacTraoDoi> getBai_dang_trao_doi() {
+	public List<BaiDangHoacTraoDoi> getBai_dang_trao_doi() {
 		return bai_dang_trao_doi;
 	}
 
-	public void setBai_dang_trao_doi(List<baiDangHoacTraoDoi> bai_dang_trao_doi) {
+	public void setBai_dang_trao_doi(List<BaiDangHoacTraoDoi> bai_dang_trao_doi) {
 		this.bai_dang_trao_doi = bai_dang_trao_doi;
 	}
 	

@@ -20,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 @Table(name = "dinh_kem")
 
-public class dinhKem implements Serializable{
+public class DinhKem implements Serializable{
 
 	@Id
     @GeneratedValue(strategy = IDENTITY)
@@ -30,18 +30,18 @@ public class dinhKem implements Serializable{
 	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_bai_dang_hoac_trao_doi", referencedColumnName = "id", nullable = false)
     @JsonIgnore
-    private baiDangHoacTraoDoi bai_dang_hoac_trao_doi;
+    private BaiDangHoacTraoDoi bai_dang_hoac_trao_doi;
 
 	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_loai_tep_tin", referencedColumnName = "id", nullable = false)
     @JsonIgnore
-    private loaiTepTin loai_tep_tin;
+    private LoaiTepTin loai_tep_tin;
 	
 	@Column(name = "address", length = 100)
 	@NotEmpty
     private String tep_tin;
 
-	public dinhKem(Integer id, baiDangHoacTraoDoi bai_dang_hoac_trao_doi, loaiTepTin loai_tep_tin, String tep_tin) {
+	public DinhKem(Integer id, BaiDangHoacTraoDoi bai_dang_hoac_trao_doi, LoaiTepTin loai_tep_tin, String tep_tin) {
 		super();
 		this.id = id;
 		this.bai_dang_hoac_trao_doi = bai_dang_hoac_trao_doi;
@@ -49,7 +49,7 @@ public class dinhKem implements Serializable{
 		this.tep_tin = tep_tin;
 	}
 
-	public dinhKem() {
+	public DinhKem() {
 		super();
 	}
 
@@ -61,19 +61,19 @@ public class dinhKem implements Serializable{
 		this.id = id;
 	}
 
-	public baiDangHoacTraoDoi getBai_dang_hoac_trao_doi() {
+	public BaiDangHoacTraoDoi getBai_dang_hoac_trao_doi() {
 		return bai_dang_hoac_trao_doi;
 	}
 
-	public void setBai_dang_hoac_trao_doi(baiDangHoacTraoDoi bai_dang_hoac_trao_doi) {
+	public void setBai_dang_hoac_trao_doi(BaiDangHoacTraoDoi bai_dang_hoac_trao_doi) {
 		this.bai_dang_hoac_trao_doi = bai_dang_hoac_trao_doi;
 	}
 
-	public loaiTepTin getLoai_tep_tin() {
+	public LoaiTepTin getLoai_tep_tin() {
 		return loai_tep_tin;
 	}
 
-	public void setLoai_tep_tin(loaiTepTin loai_tep_tin) {
+	public void setLoai_tep_tin(LoaiTepTin loai_tep_tin) {
 		this.loai_tep_tin = loai_tep_tin;
 	}
 

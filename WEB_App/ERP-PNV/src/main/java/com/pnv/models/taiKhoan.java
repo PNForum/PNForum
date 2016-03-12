@@ -1,11 +1,15 @@
 package com.pnv.models;
 
 import static javax.persistence.GenerationType.IDENTITY;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -13,89 +17,95 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @Table(name = "tai_khoan")
 
-public class taiKhoan implements java.io.Serializable{
-	
+public class TaiKhoan implements java.io.Serializable{
+ 
 
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
-	@Column(name ="id", unique = true, nullable = false)
-	private Integer id;
-	
-	@Column(name ="user_name", nullable =false, length = 45)
-	@NotEmpty
-	private String user_name;
-	
-	@Column(name = "password", nullable = false, length = 45)
-	@NotEmpty
-	private String password;
-	
-	@Column(name = "quyen", nullable = false)
-	private Integer quyen;
-	
-	@Column(name = "is_active", nullable = false)
-	private Integer is_active;
-	
-	
+ @Id
+ @GeneratedValue(strategy = IDENTITY)
+ @Column(name ="id", unique = true, nullable = false)
+ private Integer id;
+ 
+ @Column(name ="user_name", nullable =false, length = 45)
+ @NotEmpty
+ private String user_name;
+ 
+ @Column(name = "password", nullable = false, length = 45)
+ @NotEmpty
+ private String password;
+ 
+ @Column(name = "quyen", nullable = false)
+ private Integer quyen;
+ 
+ @Column(name = "is_active", nullable = false)
+ private Integer is_active;
+ 
+// @OneToOne(mappedBy="tai_khoan", cascade=CascadeType.ALL)
+// private  ThongTinCaNhan thong_tin_ca_nhan;
+// 
 
-	public taiKhoan() {
-		super();
-	}
+ @OneToOne(fetch = FetchType.LAZY, mappedBy = "tk", cascade = CascadeType.ALL)
+ private ThongTinCaNhan ttcn;
 
-	public taiKhoan(Integer id, String user_name, String password, Integer quyen, Integer is_active) {
-		super();
-		this.id = id;
-		this.user_name = user_name;
-		this.password = password;
-		this.quyen = quyen;
-		this.is_active = is_active;
-	}
+ public TaiKhoan() {
+ }
 
-	public Integer getId() {
-		return id;
-	}
+ public TaiKhoan(Integer id, String user_name, String password, Integer quyen, Integer is_active,
+   ThongTinCaNhan ttcn) {
+  super();
+  this.id = id;
+  this.user_name = user_name;
+  this.password = password;
+  this.quyen = quyen;
+  this.is_active = is_active;
+  this.ttcn = ttcn;
+ }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+ public ThongTinCaNhan getTtcn() {
+  return ttcn;
+ }
 
-	public String getUser_name() {
-		return user_name;
-	}
+ public void setTtcn(ThongTinCaNhan ttcn) {
+  this.ttcn = ttcn;
+ }
 
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
-	}
+ public Integer getId() {
+  return id;
+ }
 
-	public String getPassword() {
-		return password;
-	}
+ public void setId(Integer id) {
+  this.id = id;
+ }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+ public String getUser_name() {
+  return user_name;
+ }
 
-	public Integer getQuyen() {
-		return quyen;
-	}
+ public void setUser_name(String user_name) {
+  this.user_name = user_name;
+ }
 
-	public void setQuyen(Integer quyen) {
-		this.quyen = quyen;
-	}
+ public String getPassword() {
+  return password;
+ }
 
-	public Integer getIs_active() {
-		return is_active;
-	}
+ public void setPassword(String password) {
+  this.password = password;
+ }
 
-	public void setIs_active(Integer is_active) {
-		this.is_active = is_active;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
+ public Integer getQuyen() {
+  return quyen;
+ }
+
+ public void setQuyen(Integer quyen) {
+  this.quyen = quyen;
+ }
+
+ public Integer getIs_active() {
+  return is_active;
+ }
+
+ public void setIs_active(Integer is_active) {
+  this.is_active = is_active;
+ }
 
 }

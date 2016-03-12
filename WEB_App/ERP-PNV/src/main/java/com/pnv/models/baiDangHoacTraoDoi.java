@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 @Table(name = "bai_dang_hoac_trao_doi")
 
-public class baiDangHoacTraoDoi implements java.io.Serializable{
+public class BaiDangHoacTraoDoi implements java.io.Serializable{
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
@@ -30,16 +30,16 @@ public class baiDangHoacTraoDoi implements java.io.Serializable{
 	
 	@JsonIgnore
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "bai_dang_hoac_trao_doi")
-	private List<binhLuan> binh_luan;
+	private List<BinhLuan> binh_luan;
 	
 	@JsonIgnore
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "bai_dang_hoac_trao_doi")
-	private List<dinhKem> dinh_kem;
+	private List<DinhKem> dinh_kem;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_chu_de", referencedColumnName = "id", nullable = false)
 	@JsonIgnore
-	private chuDe chu_de;
+	private ChuDe chu_de;
 	
 	@Column(name = "tieu_de", nullable = false, length = 255)
 	@NotEmpty
@@ -71,13 +71,13 @@ public class baiDangHoacTraoDoi implements java.io.Serializable{
 	
 	
 
-	public baiDangHoacTraoDoi() {
+	public BaiDangHoacTraoDoi() {
 		super();
 	}
 
 	
 	
-	public baiDangHoacTraoDoi(Integer id, chuDe chu_de, String tieu_de, Integer the_loai_bai, String noi_dung,
+	public BaiDangHoacTraoDoi(Integer id, ChuDe chu_de, String tieu_de, Integer the_loai_bai, String noi_dung,
 			Integer luot_thich, DateTime ngay_dang_bai, Integer spam, Integer isActive) {
 		super();
 		this.id = id;
@@ -93,7 +93,7 @@ public class baiDangHoacTraoDoi implements java.io.Serializable{
 
 
 
-	public baiDangHoacTraoDoi(Integer id, List<binhLuan> binh_luan, List<dinhKem> dinh_kem, chuDe chu_de,
+	public BaiDangHoacTraoDoi(Integer id, List<BinhLuan> binh_luan, List<DinhKem> dinh_kem, ChuDe chu_de,
 			String tieu_de, Integer the_loai_bai, String noi_dung, Integer luot_thich, DateTime ngay_dang_bai,
 			Integer spam, Integer isActive) {
 		super();
@@ -120,27 +120,27 @@ public class baiDangHoacTraoDoi implements java.io.Serializable{
 		this.id = id;
 	}
 
-	public List<binhLuan> getBinh_luan() {
+	public List<BinhLuan> getBinh_luan() {
 		return binh_luan;
 	}
 
-	public void setBinh_luan(List<binhLuan> binh_luan) {
+	public void setBinh_luan(List<BinhLuan> binh_luan) {
 		this.binh_luan = binh_luan;
 	}
 
-	public List<dinhKem> getDinh_kem() {
+	public List<DinhKem> getDinh_kem() {
 		return dinh_kem;
 	}
 
-	public void setDinh_kem(List<dinhKem> dinh_kem) {
+	public void setDinh_kem(List<DinhKem> dinh_kem) {
 		this.dinh_kem = dinh_kem;
 	}
 
-	public chuDe getChu_de() {
+	public ChuDe getChu_de() {
 		return chu_de;
 	}
 
-	public void setChu_de(chuDe chu_de) {
+	public void setChu_de(ChuDe chu_de) {
 		this.chu_de = chu_de;
 	}
 
