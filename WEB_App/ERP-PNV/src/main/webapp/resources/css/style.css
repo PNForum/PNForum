@@ -110,7 +110,7 @@ img{
   position:absolute;
   left:50%; /* centers the loading animation horizontally one the screen */
   top:50%; /* centers the loading animation vertically one the screen */
-  background-image:url(images/status.gif); /* path to your loading animation */
+  background-image:url(/resources/images/status.gif); /* path to your loading animation */
   background-repeat:no-repeat;
   background-position:center;
   margin:-100px 0 0 -100px; /* is width and height divided by two */
@@ -121,7 +121,7 @@ img{
 .scrollToTop {
 	bottom: 30px;
 	display: none;
-	font-size: 20px;
+	font-size: 25px;
 	line-height: 30px;
 	font-weight: bold;
 	height: 30px;
@@ -1671,7 +1671,7 @@ figure.blog-figure:hover .image-effect::before {
 	float: left;
 	display: inline;
 	width: 100%;
-	text-align: right;
+	text-align: center;
 }
 .blog-pagination .pagination > li > a,
 .blog-pagination .pagination > li > span {

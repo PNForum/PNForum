@@ -70,9 +70,13 @@
         
         <property name="annotatedClasses">
 			<list>
-				<value>com.pnv.models.Titles</value>
-				<value>com.pnv.models.Employees</value>
-				<value>com.pnv.models.Departments</value>
+				<value>com.pnv.models.BaiDangHoacTraoDoi</value>
+				<value>com.pnv.models.BinhLuan</value>
+				<value>com.pnv.models.ChuDe</value>
+				<value>com.pnv.models.DinhKem</value>
+				<value>com.pnv.models.LoaiTepTin</value>
+				<value>com.pnv.models.TaiKhoan</value>
+				<value>com.pnv.models.ThongTinCaNhan</value>
 			</list>
 		</property>
         

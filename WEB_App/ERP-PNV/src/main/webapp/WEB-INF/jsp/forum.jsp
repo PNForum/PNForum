@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
     <!--=============================================== 
     Template Design By WpFreeware Team.
     Author URI : http://www.wpfreeware.com/
@@ -22,26 +23,22 @@
     <!-- CSS
     ================================================== -->       
     <!-- Bootstrap css file-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font awesome css file-->
-    <link href="css/font-awesome.min.css" rel="stylesheet">       
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">       
     <!-- Default Theme css file -->
-    <link id="switcher" href="css/themes/lite-blue-theme.css" rel="stylesheet">   
+    <link id="switcher" href="resources/css/themes/lite-blue-theme.css" rel="stylesheet">   
     <!-- Slick slider css file -->
-    <link href="css/slick.css" rel="stylesheet"> 
+    <link href="resources/css/slick.css" rel="stylesheet"> 
     <!-- Photo Swipe Image Gallery -->     
-    <link rel='stylesheet prefetch' href='css/photoswipe.css'>
-    <link rel='stylesheet prefetch' href='css/default-skin.css'>    
+    <link rel='stylesheet prefetch' href='resources/css/photoswipe.css'>
+    <link rel='stylesheet prefetch' href='resources/css/default-skin.css'>    
 
     <!-- Main structure css file -->
-    <link href="style.css" rel="stylesheet">
-    <link href="css/stylesheet.css">
+    <link href="resources/css/style.css" rel="stylesheet"> 
+
+    <link href="resources/css/stylesheet.css">
    
-   
-   <link href="css/meanmenu.css" rel="stylesheet"> 
-   <link href="css/styleMenu.css" rel="stylesheet"> 
-   <link href="css/responsive.css" rel="stylesheet">
-<!--   <link href="css/normalize.css" rel="stylesheet">  -->
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>  
     <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>   
@@ -91,15 +88,16 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-                <li ><a href="index.html">Home</a></li>
-                <li><a href="discuss.html">Discuss</a></li>
+                <li><a href="<%=request.getContextPath()%>/">Home</a></li>
+                <li><a href="<%=request.getContextPath()%>/discuss">Discuss</a></li>
+                
                 <li class="active"><a href="forum.html">Forum</a></li>
-                <li><a href="about-us.html">About us</a></li>
+               <li ><a href="<%=request.getContextPath()%>/about_us">About us</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="fa fa-angle-down"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="login.html">Sign in</a></li>
-                    <li><a href="register.html">Regiser</a></li>
+                    <li><a href="<%=request.getContextPath()%>/login">Sign in</a></li>
+                    <li><a href="<%=request.getContextPath()%>/register">Regiser</a></li>
                     <li><a href="#">Logout</a></li>
                   </ul>
                 </li>
@@ -135,164 +133,6 @@
         </div>        
       </div>
    
-     <!-- =============== Statt menu multilevel =======================-->
-     		<header class="flatMenu">
-         <div class="container">
-				<div class="row">
-					<div class="col-md-12 no-padding">
-						<div class="flat-mega-menu" style="display: block;">
-							<div class="title">Main Menu</div>
-							<div class="top-search">
-								<a href="#"><i class="fa fa-search"></i></a>
-							</div>
-							<div class="search-body">
-								<div class="row">
-									<div class="col-sm-12">
-										<input type="text" class="form-control" placeholder="Search for...">
-									</div>
-								</div>
-							</div>						
-							<ul>
-								<li><a href=""><i class="fa fa-home"></i>IT</a>
-									<ul class="single-nav">
-										<li><a href="#">Home 1</a></li>
-										<li><a href="#">Home 1</a></li>
-										<li><a href="#">Home 1</a></li>
-										<li><a href="#">Home 1</a></li>
-									</ul>
-								</li>
-								<li><a href=""><i class="fa fa-desktop"></i>IT</a>
-									<ul class="single-nav">
-										<li><a href="http://www.htmlcooker.com/flatnav/index.html#">JAVA<i class="fa fa-angle-double-right arrow"></i></a>
-											<ul class="drop-right">
-												<li><a href=""> OOP</a></li>
-												<li><a href=""> Java Swing</a></li>
-												<li><a href=""> JSP/Severlet</a></li>
-												<li><a href=""> Spring/Hibernate</a></li>
-                                                <li><a href=""> Others</a></li>
-											</ul>
-										</li>
-										<li><a href="">PHP</a>
-                                            <ul class="drop-right">
-												<li><a href=""> PHP core</a></li>
-												<li><a href=""> Cake PHP</a></li>
-                                                <li><a href=""> Others</a></li>
-											</ul>
-                                        </li>
-										    
-										<li><a href="l#">Mobile</a>
-										    <ul class="drop-right">
-												<li><a href=""> Android</a></li>
-												<li><a href="">iOS</a></li>
-                                                <li><a href=""> Others</a></li>
-											</ul>
-										</li>
-										<li><a href="l#">HTML/CSS/Java script</a></li>
-										<li><a href="l#">Testing </a></li>
-										<li><a href="l#">Others</a></li>
-										
-									</ul>
-								</li>
-								<li><a href=""><i class="fa fa-home"></i>Soft skils</a>
-								    <ul class="single-nav">
-										<li><a href="#">Presentation</a></li>
-										<li><a href="#">CV/Cover letter</a></li>
-										<li><a href="#">Internship</a></li>
-										<li><a href="#">Communicates</a></li>
-										<li><a href="#">Others</a></li>
-										
-									</ul>
-								</li>
-								<li class="mega-menu"><a href="#"><i class="fa fa-file-text-o"></i>English</a>
-									<ul class="mega-menu-body">
-										<div class="col-lg-3 col-sm-6 no-padding">
-											<li>
-												<h3>Speaking</h3>
-												<ul class="category-title">
-													<li>
-														<div class="news-title">
-															<img class="img-responsive" src="./Flat Style Mega Navigation_files/2.jpg" alt="">
-														</div>
-													</li>
-												</ul>
-											</li>
-										</div>
-										
-										<div class="col-lg-3 col-sm-6 no-padding">
-											<li>
-												<h3>Reading</h3>
-												<ul class="category-title">
-													<li>
-														<div class="news-title">
-															<img class="img-responsive" src="./Flat Style Mega Navigation_files/2.jpg" alt="">
-														</div>
-													</li>
-												</ul>
-											</li>
-										</div>
-										
-										<div class="col-lg-3 col-sm-6 no-padding">
-											<li>
-												<h3>Writing</h3>
-												<ul class="category-title">
-													<li>
-														<div class="news-title">
-															<img class="img-responsive" src="./Flat Style Mega Navigation_files/2.jpg" alt="">
-														</div>
-													</li>
-												</ul>
-											</li>
-										</div>
-										
-										<div class="col-lg-3 col-sm-6 no-padding">
-											<li>
-												<h3>Listerning</h3>
-												<ul class="category-title">
-													<li>
-														<div class="news-title">
-															<img class="img-responsive" src="./Flat Style Mega Navigation_files/2.jpg" alt="">
-														</div>
-													</li>
-												</ul>
-											</li>
-										</div>
-
-									</ul>
-								</li>
-								<li><a href=""><i class="fa fa-phone"></i>Others</a>
-									
-								</li>
-								<li id="search" class="mega-menu"><a href="#"><i class="fa fa-search"></i></a>
-									<ul class="mega-menu-body">
-										<li>
-											<div class="form-group">
-												<div class="input-group">
-													<input type="text" class="form-control" placeholder="Type keyword here to search">
-													<span class="input-group-btn">
-														<button class="btn" type="button">Search</button>
-													</span>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</li>
-
-							</ul>
-						</div> 	
-					</div>
-				</div>
-			</div>
-        </header>
-
-		
-		<script src="./Flat Style Mega Navigation_files/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="./Flat Style Mega Navigation_files/plugins.js"></script>
-        <script src="./Flat Style Mega Navigation_files/bootstrap.min.js"></script>
-		<script src="./Flat Style Mega Navigation_files/jquery.meanmenu.js"></script>
-     <!-- =============== End menu multilevel =======================-->
-     
-
       <div class="col-md-12 col-lg12">
                       <aside class="sidebar">
                         <!-- Start sidebar widget -->
@@ -326,15 +166,18 @@
                                 </div>
                                 <div class="media-body">
                                  <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\>
-                                     <p>Vài dòng miêu tả chi tiết vô đây nữa</p></br\></a>
+                                     <p>Vài dòng miêu tả chi tiết vô đây nữa</p></a>
                                  <ul class="tag-nav">
                                      <div class="col-md-8">
                                      <li><a href="#">tag 1</a><a href="#">tag 2</a><a href="#">tag 3</a><a class="pull-right" href="#">readmore...</a></li>
                                      </div>
                                   
                                 </ul>
-                                    </div>
+                                <div>
+                                    
                                 </div>
+                                </div>
+                              </div>
                             </li>
                                              
                             <li>
@@ -363,7 +206,7 @@
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\></br\>
+                                 <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\>
                                      <p>Vài dòng miêu tả chi tiết vô đây nữa</p></a>
                                  <ul class="tag-nav">
                                      <div class="col-md-8">
@@ -404,7 +247,7 @@
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\></br\>
+                                 <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\>
                                      <p>Vài dòng miêu tả chi tiết vô đây nữa</p></a>
                                  <ul class="tag-nav">
                                      <div class="col-md-8">
@@ -445,7 +288,7 @@
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\></br\>
+                                 <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\>
                                      <p>Vài dòng miêu tả chi tiết vô đây nữa</p></a>
                                  <ul class="tag-nav">
                                      <div class="col-md-8">
@@ -486,7 +329,7 @@
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\></br\>
+                                 <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\>
                                      <p>Vài dòng miêu tả chi tiết vô đây nữa</p></a>
                                  <ul class="tag-nav">
                                      <div class="col-md-8">
@@ -527,7 +370,7 @@
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\></br\>
+                                 <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\>
                                      <p>Vài dòng miêu tả chi tiết vô đây nữa</p></a>
                                  <ul class="tag-nav">
                                      <div class="col-md-8">
@@ -547,9 +390,29 @@
                       </aside>
                     </div>
     </section> 
-
    <!--=========== END QUESTION ================-->  
-   
+                       
+                    <div class="blog-pagination">
+                          <nav>
+                            <ul class="pagination">
+                              <li>
+                                <a href="#" aria-label="Previous">
+                                  <span class="fa fa-angle-left"></span>
+                                </a>
+                              </li>
+                              <li><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li>
+                                <a href="#" aria-label="Next">
+                                  <span class="fa fa-angle-right"></span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
    
     <!--=========== Start Footer SECTION ================-->
     <footer id="footer">
@@ -637,34 +500,31 @@
             </div>
           </div>
         </div>
-          </div>
+        </div>
       </div>
     </footer>
     <!--=========== End Footer SECTION ================-->
    
     <!-- jQuery Library  -->
-    <script src="js/jquery.js"></script>    
+    <script src="resources/js/jquery.js"></script>    
     <!-- Bootstrap default js -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
     <!-- slick slider -->
-    <script src="js/slick.min.js"></script>    
-    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>      
+    <script src="resources/js/slick.min.js"></script>    
+    <script type="text/javascript" src="resources/js/modernizr.custom.79639.js"></script>      
     <!-- counter -->
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
+    <script src="resources/js/waypoints.min.js"></script>
+    <script src="resources/js/jquery.counterup.min.js"></script>
     <!-- Doctors hover effect -->
-    <script src="js/snap.svg-min.js"></script>
-    <script src="js/hovers.js"></script>
+    <script src="resources/js/snap.svg-min.js"></script>
+    <script src="resources/js/hovers.js"></script>
     <!-- Photo Swipe Gallery Slider -->
     <script src='js/photoswipe.min.js'></script>
     <script src='js/photoswipe-ui-default.min.js'></script>    
-    <script src="js/photoswipe-gallery.js"></script>
+    <script src="resources/js/photoswipe-gallery.js"></script>
 
-   <script src="js/jquery.meanmenu.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/modernizr-2.8.3.min.js"></script>
     <!-- Custom JS -->
-    <script src="js/custom.js"></script>
+    <script src="resources/js/custom.js"></script>
      
       <script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",37282]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>
   </body>

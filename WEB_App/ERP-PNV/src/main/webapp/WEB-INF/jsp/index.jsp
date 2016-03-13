@@ -1,22 +1,16 @@
-<!-- <%@ include file="./header.jsp" %>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-
-<h1>Welcome to  our project</h1>
-
-
-
-<%@ include file="./footer.jsp" %>  -->
-
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
   <head>
     <!--=============================================== 
-    Template Design By VSHD Team.
+    Template Design By WpFreeware Team.
+    Author URI : http://www.wpfreeware.com/
     ====================================================-->
 
     <!-- Basic Page Needs
     ================================================== -->
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <title>PN Forum : Home</title>
 
@@ -30,23 +24,22 @@
     <!-- CSS
     ================================================== -->       
     <!-- Bootstrap css file-->
-    <link href="<c:url value='/resources/css/bootstrap.min.css' />" rel="stylesheet"></link>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font awesome css file-->
-    <link href="<c:url value='/resources/css/font-awesome.min.css' />" rel="stylesheet">       
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">       
     <!-- Default Theme css file -->
-    <link id="switcher" href="<c:url value='/resources/css/themes/lite-blue-theme.css' />" rel="stylesheet"></link>  
+    <link id="switcher" href="resources/css/themes/lite-blue-theme.css" rel="stylesheet">   
     <!-- Slick slider css file -->
-    <link href="<c:url value='/resources/css/slick.css' />" rel="stylesheet"></link>
+    <link href="resources/css/slick.css" rel="stylesheet"> 
     <!-- Photo Swipe Image Gallery -->     
-    <link href="<c:url value='/resources/css/photoswipe.css' />" rel='stylesheet prefetch'></link>
-    <link href="<c:url value='/resources/css/default-skin.css' />" rel='stylesheet prefetch'></link>
- 
+    <link rel='stylesheet prefetch' href='resources/css/photoswipe.css'>
+    <link rel='stylesheet prefetch' href='resources/css/default-skin.css'>    
 
     <!-- Main structure css file -->
-    <link href="<c:url value='/resources/css/style.css' />" rel="stylesheet"></link>
+    <link href="resources/css/style.css" rel="stylesheet">
    
     <!-- Google fonts -->
-    <link href= 'http://fonts.googleapis.com/css?family=Raleway'rel='stylesheet' type='text/css'>  
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>  
     <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>   
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:900' rel='stylesheet' type='text/css'>
 
@@ -91,15 +84,16 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="discuss.html">Discuss</a></li>
+                <li class="active"><a href="<%=request.getContextPath()%>/">Home</a></li>
+                <li><a href="<%=request.getContextPath()%>/discuss">Discuss</a></li>
+                
                 <li><a href="forum.html">Forum</a></li>
-                <li><a href="about-us.html">About us</a></li>
+               <li><a href="<%=request.getContextPath()%>/about_us">About us</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="fa fa-angle-down"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="login.html">Sign in</a></li>
-                    <li><a href="register.html">Regiser</a></li>
+                    <li><a href="<%=request.getContextPath()%>/post">Sign in</a></li>
+                    <li><a href="<%=request.getContextPath()%>/register">Regiser</a></li>
                     <li><a href="#">Logout</a></li>
                   </ul>
                 </li>
@@ -120,7 +114,7 @@
         <!-- Start First slide -->
         <div class="top-slide-inner">
           <div class="slider-img">
-            <img src="images/14.jpg" alt="">
+            <img src="resources/images/14.jpg" alt="">
           </div>
         </div>
         <!-- End First slide -->
@@ -128,7 +122,7 @@
         <!-- Start 2nd slide -->
         <div class="top-slide-inner">
           <div class="slider-img">
-            <img src="images/15.jpg" alt="">
+            <img src="resources/images/15.jpg" alt="">
           </div>
 <!--
           <div class="slider-text">
@@ -145,7 +139,7 @@
         <!-- Start Third slide -->
         <div class="top-slide-inner">
           <div class="slider-img">
-            <img src="images/7.jpg" alt="">
+            <img src="resources/images/7.jpg" alt="">
           </div>
         </div>
         <!-- End Third slide -->
@@ -153,7 +147,7 @@
         <!-- Start Fourth slide -->
         <div class="top-slide-inner">
           <div class="slider-img">
-            <img src="images/12.jpg" alt="">
+            <img src="resources/images/12.jpg" alt="">
           </div>
         </div>
         <!-- End Fourth slide -->
@@ -161,7 +155,7 @@
         <!-- Start Fifth slide -->
         <div class="top-slide-inner">
           <div class="slider-img">
-            <img src="images/9.jpg" alt="">
+            <img src="resources/images/9.jpg" alt="">
           </div>
         </div>
         <!-- End Fifth slide -->
@@ -201,7 +195,7 @@
                       <div class="single-blog-right">
                         <div class="blog-img">
                           <figure class="blog-figure">
-                           <a href="#"><img src="images/choose-us-img3.jpg" alt="img"></a>
+                           <a href="#"><img src="resources/images/choose-us-img3.jpg" alt="img"></a>
                             <span class="image-effect"></span>
                           </figure>
                         </div>
@@ -236,7 +230,7 @@
                       <div class="single-blog-right">
                         <div class="blog-img">
                           <figure class="blog-figure">
-                           <a href="#"><img src="images/choose-us-img3.jpg" alt="img"></a>
+                           <a href="#"><img src="resources/images/choose-us-img3.jpg" alt="img"></a>
                             <span class="image-effect"></span>
                           </figure>
                         </div>
@@ -270,7 +264,7 @@
                       <div class="single-blog-right">
                         <div class="blog-img">
                           <figure class="blog-figure">
-                           <a href="#"><img src="images/choose-us-img3.jpg" alt="img"></a>
+                           <a href="#"><img src="resources/images/choose-us-img3.jpg" alt="img"></a>
                             <span class="image-effect"></span>
                           </figure>
                         </div>
@@ -312,7 +306,7 @@
                       <div class="single-blog-right">
                         <div class="blog-img">
                           <figure class="blog-figure">
-                           <a href="#"><img src="images/choose-us-img3.jpg" alt="img"></a>
+                           <a href="#"><img src="resources/images/choose-us-img3.jpg" alt="img"></a>
                             <span class="image-effect"></span>
                           </figure>
                         </div>
@@ -347,7 +341,7 @@
                       <div class="single-blog-right">
                         <div class="blog-img">
                           <figure class="blog-figure">
-                           <a href="#"><img src="images/choose-us-img3.jpg" alt="img"></a>
+                           <a href="#"><img src="resources/images/choose-us-img3.jpg" alt="img"></a>
                             <span class="image-effect"></span>
                           </figure>
                         </div>
@@ -381,7 +375,7 @@
                       <div class="single-blog-right">
                         <div class="blog-img">
                           <figure class="blog-figure">
-                           <a href="#"><img src="images/choose-us-img3.jpg" alt="img"></a>
+                           <a href="#"><img src="resources/images/choose-us-img3.jpg" alt="img"></a>
                             <span class="image-effect"></span>
                           </figure>
                         </div>
@@ -411,6 +405,27 @@
           </div>
         </div>
       </div>
+      <div class="blog-pagination">
+                          <nav>
+                            <ul class="pagination">
+                              <li>
+                                <a href="#" aria-label="Previous">
+                                  <span class="fa fa-angle-left"></span>
+                                </a>
+                              </li>
+                              <li><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li>
+                                <a href="#" aria-label="Next">
+                                  <span class="fa fa-angle-right"></span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
     </section>
     <!--=========== End Home Blog SECTION ================-->
 
@@ -506,38 +521,25 @@
     <!--=========== End Footer SECTION ================-->
    
     <!-- jQuery Library  -->
-    <script href="<c:url value='/resources/js/jquery.js' />"></script>
-    <script href="<c:url value='/resources/js/bootstrap.min.js' />"></script>
-    <script href="<c:url value='/resources/js/slick.min.js' />"></script>
-    <script href="<c:url value='/resources/js/modernizr.custom.79639.js' />"></script>
-    <script href="<c:url value='/resources/js/waypoints.min.js' />"></script>
-    <script href="<c:url value='/resources/js/jquery.counterup.min.js' />"></script>
-    <script href="<c:url value='/resources/js/snap.svg-min.js' />"></script>
-    <script href="<c:url value='/resources/js/hovers.js' />"></script>
-    <script href="<c:url value='/resources/js/photoswipe.min.jss' />"></script>
-    <script href="<c:url value='/resources/js/photoswipe-ui-default.min.js' />"></script>
-     <script href="<c:url value='/resources/js/photoswipe-gallery.js' />"></script>
-    <script href="<c:url value='/resources/js/custom.js' />"></script>
-    
- <script src="js/jquery.js"></script>    
+    <script src="resources/js/jquery.js"></script>    
     <!-- Bootstrap default js -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
     <!-- slick slider -->
-    <script src="js/slick.min.js"></script>    
-    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>      
+    <script src="resources/js/slick.min.js"></script>    
+    <script type="text/javascript" src="resources/js/modernizr.custom.79639.js"></script>      
     <!-- counter -->
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
+    <script src="resources/js/waypoints.min.js"></script>
+    <script src="resources/js/jquery.counterup.min.js"></script>
     <!-- Doctors hover effect -->
-    <script src="js/snap.svg-min.js"></script>
-    <script src="js/hovers.js"></script>
+    <script src="resources/js/snap.svg-min.js"></script>
+    <script src="resources/js/hovers.js"></script>
     <!-- Photo Swipe Gallery Slider -->
-    <script src='js/photoswipe.min.js'></script>
-    <script src='js/photoswipe-ui-default.min.js'></script>    
-    <script src="js/photoswipe-gallery.js"></script>
+    <script src='resources/js/photoswipe.min.js'></script>
+    <script src='resources/js/photoswipe-ui-default.min.js'></script>    
+    <script src="resources/js/photoswipe-gallery.js"></script>
 
     <!-- Custom JS -->
-    <script src="js/custom.js"></script> 
+    <script src="resources/js/custom.js"></script>
       <script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",37282]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>
   </body>
 </html>
