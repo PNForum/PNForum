@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_divider">
+
+    <include
+        layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lv_post_discuss" />
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:background="@color/list_divider"
+            android:id="@+id/layout_menu_type_object"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorMyTitleBar"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="IT"
+                    android:textColor="@color/white"
+                    android:background="@color/colorMyTitleBar"
+                    android:id="@+id/btn_menu_bar_it"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/btn_more_option_it"
+                    android:background="@drawable/ic_more_option"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorMyTitleBar"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="English"
+                    android:textColor="@color/white"
+                    android:background="@color/colorMyTitleBar"
+                    android:id="@+id/btn_menu_bar_english"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text=""
+                    android:id="@+id/btn_more_option_english"
+                    android:background="@drawable/ic_more_option" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorMyTitleBar"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Soft skills"
+                    android:textColor="@color/white"
+                    android:background="@color/colorMyTitleBar"
+                    android:id="@+id/btn_menu_bar_soft_skills"
+                    android:layout_weight="1" />
+
+
+                <Spinner
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/btn_more_option_soft_skills"
+                    android:background="@drawable/ic_more_option" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorMyTitleBar"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Others"
+                    android:textColor="@color/white"
+                    android:background="@color/colorMyTitleBar"
+                    android:id="@+id/btn_menu_bar_others"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/layout_type_object"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_menu_type_object"
+            android:background="@color/colorMyTitleBar">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="IT > Java > OOP"
+                android:background="@color/colorMyTitleBar"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:id="@+id/tv_post_topic_discuss"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/post"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@color/colorMyTitleBar"
+                android:id="@+id/btn_discuss_post"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

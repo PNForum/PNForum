@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PNVForum</string>
+    <string name="post"><u>Đăng bài</u></string>
 </resources>
