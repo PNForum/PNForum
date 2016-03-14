@@ -15,14 +15,14 @@ import javax.persistence.Table;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-@Table(name = "chude")
+@Table(name = "chu_de")
 public class ChuDe {
 	 @Id
 	    @GeneratedValue(strategy = IDENTITY)
 	    @Column(name = "id", unique = true, nullable = false)
 	    private Integer id;
 	 
-	 @Column(name = "name", length = 45)
+	 @Column(name = "chu_de", length = 45)
 	    @NotEmpty
 	    private String chu_de;
 		@OneToMany(fetch = FetchType.EAGER, mappedBy = "chu_de")
