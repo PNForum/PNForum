@@ -50,9 +50,8 @@ public class ThongTinCaNhan{
 	 @PrimaryKeyJoinColumn
 	 TaiKhoan tk;
 	 
-	 @OneToMany(fetch = FetchType.EAGER, mappedBy = "thong_tin_ca_nhan")
+	 @OneToMany(targetEntity = BinhLuan.class, fetch = FetchType.EAGER, mappedBy = "thong_tin_ca_nhan")
 	 private List<BinhLuan> binh_luan;
-
 	
 
 	public ThongTinCaNhan(Integer id, String ten, Integer tuoi, String lop, String dia_chi, String email, String avatar,

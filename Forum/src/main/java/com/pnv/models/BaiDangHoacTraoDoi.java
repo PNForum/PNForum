@@ -29,14 +29,14 @@ public class BaiDangHoacTraoDoi implements Serializable{
 	 private Integer id;
 	 
 	 @JsonIgnore
-	 @OneToMany(fetch = FetchType.EAGER, mappedBy = "bai_dang_hoac_trao_doi")
+	 @OneToMany(targetEntity = BinhLuan.class ,fetch = FetchType.EAGER, mappedBy = "bai_dang_hoac_trao_doi")
 	 private List<BinhLuan> binh_luan;
 	 
 	 @JsonIgnore
-	 @OneToMany(fetch = FetchType.EAGER, mappedBy = "bai_dang_hoac_trao_doi")
+	 @OneToMany(targetEntity = DinhKem.class,fetch = FetchType.EAGER, mappedBy = "bai_dang_hoac_trao_doi")
 	 private List<DinhKem> dinh_kem;
 	 
-	 @ManyToOne(fetch = FetchType.EAGER)
+	 @ManyToOne(fetch = FetchType.EAGER, targetEntity = ChuDe.class)
 	 @JoinColumn(name = "id_chu_de", referencedColumnName = "id", nullable = false)
 	 @JsonIgnore
 	 private ChuDe chu_de;
@@ -69,11 +69,15 @@ public class BaiDangHoacTraoDoi implements Serializable{
 	 @NotEmpty
 	 private Integer isActive;
 
+	 @Column(name ="luot_xem", nullable = false)
+	 @NotEmpty
+	 private Integer luot_xem;
+	 
 	
 
 	public BaiDangHoacTraoDoi(Integer id, List<BinhLuan> binh_luan, List<DinhKem> dinh_kem, ChuDe chu_de,
 			String tieu_de, Integer the_loai_bai, String noi_dung, Integer luot_thich, String ngay_dang_bai,
-			Integer spam, Integer isActive) {
+			Integer spam, Integer isActive, Integer luot_xem) {
 		this.id = id;
 		this.binh_luan = binh_luan;
 		this.dinh_kem = dinh_kem;
@@ -85,6 +89,19 @@ public class BaiDangHoacTraoDoi implements Serializable{
 		this.ngay_dang_bai = ngay_dang_bai;
 		this.spam = spam;
 		this.isActive = isActive;
+		this.luot_xem = luot_xem;
+	}
+	
+	
+
+	public Integer getLuot_xem() {
+		return luot_xem;
+	}
+
+
+
+	public void setLuot_xem(Integer luot_xem) {
+		this.luot_xem = luot_xem;
 	}
 
 	public BaiDangHoacTraoDoi() {

@@ -12,5 +12,11 @@ public interface BaiDangHoacTraoDoiDAO {
 
     public BaiDangHoacTraoDoi findByDepartmentId(int id);
     
-	 public List<BaiDangHoacTraoDoi> findAll();
+	public List<BaiDangHoacTraoDoi> findAll();
+	 
+	public List<BaiDangHoacTraoDoi> displayByBestView();
+	
+	public List<BaiDangHoacTraoDoi> displayByBestLikee();
+	
+	public List<BaiDangHoacTraoDoi> displayPostLatest();
 }

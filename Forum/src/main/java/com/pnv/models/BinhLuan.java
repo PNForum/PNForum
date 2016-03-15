@@ -24,16 +24,16 @@ public class BinhLuan{
 	@Column(name = "id", unique = true, nullable = false)
 	private Integer id;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER, targetEntity = ThongTinCaNhan.class)
 	@JoinColumn(name = "id_thong_tin_ca_nhan", referencedColumnName = "id", nullable = false)
 	@JsonIgnore
 	private ThongTinCaNhan thong_tin_ca_nhan;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "id_bai_dang_hoac_trao_doi", referencedColumnName = "id", nullable = false)
+	@ManyToOne(fetch = FetchType.EAGER, targetEntity = BaiDangHoacTraoDoi.class)
+	@JoinColumn(name = "id_bai_dang_hoac_trao_doi", referencedColumnName = "id" )
 	@JsonIgnore
 	private BaiDangHoacTraoDoi  bai_dang_hoac_trao_doi;
-	
+
 	@Column(name = "noi_dung", nullable = false, length = 1000)
 	@NotEmpty
 	private String noi_dung;
