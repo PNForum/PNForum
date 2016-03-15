@@ -1,6 +1,8 @@
+CREATE DATABASE  IF NOT EXISTS `pnvforum` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `pnvforum`;
 -- MySQL dump 10.13  Distrib 5.6.24, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: db_pnv_forum
+-- Host: 127.0.0.1    Database: pnvforum
 -- ------------------------------------------------------
 -- Server version	5.6.20
 
@@ -14,10 +16,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
-DROP DATABASE IF EXISTS `pnv_forum`;
-CREATE DATABASE pnvforum;
-USE pnvforum;
 
 --
 -- Table structure for table `bai_dang_hoac_trao_doi`
@@ -179,8 +177,8 @@ CREATE TABLE `tai_khoan` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
-  `quyen` int(11) NOT NULL,
-  `is_active` int(11) DEFAULT NULL,
+  `quyen` int(11) NOT NULL DEFAULT '1',
+  `is_active` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -234,4 +232,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-03-11 11:55:04
+-- Dump completed on 2016-03-14  8:21:28
