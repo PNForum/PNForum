@@ -204,11 +204,11 @@ DROP TABLE IF EXISTS `thong_tin_ca_nhan`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `thong_tin_ca_nhan` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `ten` varchar(45) NOT NULL,
+  `ten` varchar(45) DEFAULT NULL,
   `tuoi` int(11) DEFAULT NULL,
-  `lop` varchar(45) NOT NULL,
+  `lop` varchar(45) DEFAULT NULL,
   `dia_chi` varchar(80) DEFAULT NULL,
-  `email` varchar(60) DEFAULT NULL,
+  `email` varchar(60) NOT NULL,
   `avatar` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `account_profile_id_pk` FOREIGN KEY (`id`) REFERENCES `tai_khoan` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -234,4 +234,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-03-15  9:05:28
+-- Dump completed on 2016-03-15  9:12:26
