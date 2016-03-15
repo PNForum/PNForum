@@ -22,5 +22,8 @@ public class AdministratorController {
         return "index";
     }
 
-    
+    @RequestMapping(value = "/about_us", method = RequestMethod.GET)
+    public String viewAboutUsPage(ModelMap map) {
+        return "about_us";
+    }
 }
