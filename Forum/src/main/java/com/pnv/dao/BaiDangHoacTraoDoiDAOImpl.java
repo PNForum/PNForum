@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.pnv.models.BaiDangHoacTraoDoi;
+import com.pnv.models.BinhLuan;
 import com.pnv.models.ChuDe;
 
 @Service
@@ -60,12 +61,26 @@ public class BaiDangHoacTraoDoiDAOImpl implements BaiDangHoacTraoDoiDAO{
 		  List<BaiDangHoacTraoDoi> bestLikeList = query.list();
 		  return bestLikeList;
 	}
+	
+	
 
 	public BaiDangHoacTraoDoi findByBaiDangId(int id) {
 		BaiDangHoacTraoDoi bd = (BaiDangHoacTraoDoi) sessionFactory.getCurrentSession().get(BaiDangHoacTraoDoi.class, id);
 		return bd;
 
 	}
+
+	public List<BaiDangHoacTraoDoi> PostSimilar(int id_chu_de) {	
+		String str = "from BaiDangHoacTraoDoi WHERE the_loai_bai = 1 WHERE id_chu_de = '"+id_chu_de+"'";
+		Query query = sessionFactory.getCurrentSession().createQuery(str);
+		query.setFirstResult(0);
+		query.setMaxResults(3);
+		List<BaiDangHoacTraoDoi> postSimilar = query.list();
+		return null;
+	}
+
+
+
 
 	
 	 

@@ -3,6 +3,7 @@ package com.pnv.dao;
 import java.util.List;
 
 import com.pnv.models.BaiDangHoacTraoDoi;
+import com.pnv.models.BinhLuan;
 
 public interface BaiDangHoacTraoDoiDAO {
  
@@ -19,5 +20,7 @@ public interface BaiDangHoacTraoDoiDAO {
 	public List<BaiDangHoacTraoDoi> displayByBestLikee();
 	
 	public List<BaiDangHoacTraoDoi> displayPostLatest();
+	
+	public List<BaiDangHoacTraoDoi> PostSimilar(int id_chu_de);
 
 }
