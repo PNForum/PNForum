@@ -28,14 +28,6 @@ public class BaiDangHoacTraoDoiDAOImpl implements BaiDangHoacTraoDoiDAO{
 		
 	}
 
-	public BaiDangHoacTraoDoi findByDepartmentId(int id) {
-		BaiDangHoacTraoDoi bdhtd = null;
-	      
-		bdhtd = (BaiDangHoacTraoDoi) sessionFactory.getCurrentSession().get(BaiDangHoacTraoDoi.class, id);
-   
-    return bdhtd;
-	}
-
 	public List<BaiDangHoacTraoDoi> findAll() {
 		List<BaiDangHoacTraoDoi> bdhtdList = sessionFactory.getCurrentSession().createQuery("from BaiDangHoacTraoDoi WHERE the_loai_bai = 1").list();
 
@@ -67,6 +59,12 @@ public class BaiDangHoacTraoDoiDAOImpl implements BaiDangHoacTraoDoiDAO{
 		  query.setMaxResults(3);
 		  List<BaiDangHoacTraoDoi> bestLikeList = query.list();
 		  return bestLikeList;
+	}
+
+	public BaiDangHoacTraoDoi findByBaiDangId(int id) {
+		BaiDangHoacTraoDoi bd = (BaiDangHoacTraoDoi) sessionFactory.getCurrentSession().get(BaiDangHoacTraoDoi.class, id);
+		return bd;
+
 	}
 
 	

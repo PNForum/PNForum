@@ -26,4 +26,9 @@ public class AdministratorController {
     public String viewAboutUsPage(ModelMap map) {
         return "about_us";
     }
+    
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    public String viewAdminPage(ModelMap map) {
+        return "admin";
+    }
 }

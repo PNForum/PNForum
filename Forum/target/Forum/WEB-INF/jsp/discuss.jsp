@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
   <head>
@@ -137,13 +138,16 @@
                     <!-- Start Blog Content -->
                     <div class="col-md-9 col-sm-8">                     
                       <div class="blog-content">
+                      
                         <!-- Start Single Blog -->
+                        <c:forEach items="${baidangList}" var="baidang">  
                         <div class="single-Blog">
                           <div class="single-blog-left">
                             <ul class="blog-comments-box">
-                              <li>May <h2>10</h2>2015</li>
-                              <li><span class="fa fa-eye"></span>1523</li>
-                              <li><a href="#"><span class="fa fa-comments"></span>5</a></li>
+                              <!-- <li>May <h2>10</h2>2015</li> -->
+                              <li><c:out value="${baidang.ngay_dang_bai}"/></li>
+                              <li><span class="fa fa-eye"></span><c:out value="${baidang.luot_xem}"/></li>
+                              <li><a href="#"><span class="fa fa-comments"></span></span><c:out value="${baidang.luot_xem}"/></a></li>
                             </ul>
                           </div>
                           <div class="single-blog-right">
@@ -155,116 +159,26 @@
                             </div>
                             <div class="blog-author">
                               <ul>
-                                <li>By <a href="#">Dr. Smith</a></li>
-                                <li>In <a href="#">Dental</a></li>
+                                <li>By <a href="#"></span><c:out value="${baidang.id}"/></a></li>
+                                <li>In <a href="#"></span><c:out value="${baidang.tieu_de}"/></a></li>
                               </ul>
                             </div>
                             <div class="blog-content">
-                              <h2>Latest Trend Of Medical Dental Department</h2>
-                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                              <h2><c:out value="${baidang.tieu_de}"/></h2>
+                              <p><c:out value="${baidang.noi_dung}"/></p>
                               <!-- Read more btn -->
+                              
                              <div class="readmore_area">
-                            <a href="#" data-hover="Read More"><span>Read More</span></a>                
-                          </div>
+                            		<a href="<%=request.getContextPath()%>/getbyId?id=${baidang.id}" data-hover="Read More">
+                            		<c:out value="${findByID.id }"></c:out><span>Read More</span></a>                
+                          	 </div>
+                          	 
+                          	 
                             </div>
                           </div>
                         </div>
-                        <!-- Start Single Blog -->
-                        <div class="single-Blog">
-                          <div class="single-blog-left">
-                            <ul class="blog-comments-box">
-                              <li>May <h2>10</h2>2015</li>
-                              <li><span class="fa fa-eye"></span>1523</li>
-                              <li><a href="#"><span class="fa fa-comments"></span>5</a></li>
-                            </ul>
-                          </div>
-                          <div class="single-blog-right">
-                            <div class="blog-img">
-                              <figure class="blog-figure">
-                               <a href="#"><img alt="img" src="resources/images/9.jpg"></a>
-                                <span class="image-effect"></span>
-                              </figure>
-                            </div>
-                            <div class="blog-author">
-                              <ul>
-                                <li>By <a href="#">Dr. Smith</a></li>
-                                <li>In <a href="#">Dental</a></li>
-                              </ul>
-                            </div>
-                            <div class="blog-content">
-                              <h2>Latest Trend Of Medical Dental Department</h2>
-                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                              <!-- Read more btn -->
-                              <div class="readmore_area">
-                            <a href="#" data-hover="Read More"><span>Read More</span></a>                
-                          </div>  
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Start Single Blog -->
-                        <div class="single-Blog">
-                          <div class="single-blog-left">
-                            <ul class="blog-comments-box">
-                              <li>May <h2>10</h2>2015</li>
-                              <li><span class="fa fa-eye"></span>1523</li>
-                              <li><a href="#"><span class="fa fa-comments"></span>5</a></li>
-                            </ul>
-                          </div>
-                          <div class="single-blog-right">
-                            <div class="blog-img">
-                              <figure class="blog-figure">
-                               <a href="#"><img alt="img" src="resources/images/9.jpg"></a>
-                                <span class="image-effect"></span>
-                              </figure>
-                            </div>
-                            <div class="blog-author">
-                              <ul>
-                                <li>By <a href="#">Dr. Smith</a></li>
-                                <li>In <a href="#">Dental</a></li>
-                              </ul>
-                            </div>
-                            <div class="blog-content">
-                              <h2>Latest Trend Of Medical Dental Department</h2>
-                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                              <!-- Read more btn -->
-                              <div class="readmore_area">
-                            <a href="#" data-hover="Read More"><span>Read More</span></a>                
-                          </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Start Single Blog -->
-                        <div class="single-Blog">
-                          <div class="single-blog-left">
-                            <ul class="blog-comments-box">
-                              <li>May <h2>10</h2>2015</li>
-                              <li><span class="fa fa-eye"></span>1523</li>
-                              <li><a href="#"><span class="fa fa-comments"></span>5</a></li>
-                            </ul>
-                          </div>
-                          <div class="single-blog-right">
-                            <div class="blog-img">
-                              <figure class="blog-figure">
-                               <a href="#"><img alt="img" src="resources/images/9.jpg"></a>
-                                <span class="image-effect"></span>
-                              </figure>
-                            </div>
-                            <div class="blog-author">
-                              <ul>
-                                <li>By <a href="#">Dr. Smith</a></li>
-                                <li>In <a href="#">Dental</a></li>
-                              </ul>
-                            </div>
-                            <div class="blog-content">
-                              <h2>Latest Trend Of Medical Dental Department</h2>
-                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                              <!-- Read more btn -->
-                              <div class="readmore_area">
-                            <a href="#" data-hover="Read More"><span>Read More</span></a>                
-                          </div>
-                            </div>
-                          </div>
-                        </div>                        
+                        </c:forEach>
+                        
                         <!-- Start blog pagination  -->
                         <div class="blog-pagination">
                           <nav>
@@ -296,6 +210,8 @@
                         <div class="sidebar-widget">
                           <h3>Latest Posts</h3>
                           <ul class="popular-tab">
+                          
+                            <c:forEach items = "${diplaybyDate}" var ="ByDate"> 
                             <li>
                               <div class="media">
                                 <div class="media-left">
@@ -304,43 +220,20 @@
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                 <a href="blog-single.html">Dummy text of the Medical Post</a>
-                                 <span class="feed-date">27.02.15</span>
+                                 <a href="#"><c:out value="${ByDate.tieu_de}"/></a>
+                                 <span><c:out value="${ByDate.ngay_dang_bai}"/></span>
                                 </div>
                               </div>
                             </li>
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#" class="news-img">
-                                    <img alt="img" src="resources/images/small-blog-img2.jpg" class="media-object">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                 <a href="blog-single.html">Dummy text of the Medical Post</a>
-                                 <span class="feed-date">28.02.15</span>                
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#" class="news-img">
-                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                 <a href="#">Dummy text of the Medical Post</a>
-                                 <span class="feed-date">28.02.15</span>                
-                                </div>
-                              </div>
-                            </li>                  
+                           </c:forEach>
+                                           
                           </ul>
                         </div>
                         <!-- Start sidebar widget -->
                         <div class="sidebar-widget">
                           <h3>Most Viewed</h3>
                           <ul class="popular-tab">
+                          <c:forEach items = "${diplayByLike}" var ="ByLike"> 
                             <li>
                               <div class="media">
                                 <div class="media-left">
@@ -349,37 +242,12 @@
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                 <a href="blog-single.html">Dummy text of the Medical Post</a>
-                                 <span class="feed-date">27.02.15</span>
+                                 <a href="#"><c:out value = "${ByLike.tieu_de }"/> </a>
+                                 <span class="feed-date"><c:out value = "${ByLike.id }"/></span>
                                 </div>
                               </div>
                             </li>
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#" class="news-img">
-                                    <img alt="img" src="resources/images/small-blog-img2.jpg" class="media-object">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                 <a href="blog-single.html">Dummy text of the Medical Post</a>
-                                 <span class="feed-date">28.02.15</span>                
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#" class="news-img">
-                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                 <a href="#">Dummy text of the Medical Post</a>
-                                 <span class="feed-date">28.02.15</span>                
-                                </div>
-                              </div>
-                            </li>                  
+                          </c:forEach>           
                           </ul>
                         </div>
                         <!-- Start sidebar widget -->
@@ -401,8 +269,13 @@
                         </div>
                         <!-- Start sidebar widget -->
                         <div class="sidebar-widget">
-                          <h3>Text Widget</h3>
-                          <p>This is text widget of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly <a href="#">believable</a></p>
+                          <h3>Post</h3>
+                          <p>Do you want to post something.<br/> <a href="#">Click here</a></p>
+                          <div class="readmore_area">
+                            <a href="<%=request.getContextPath()%>/post" data-hover="POST"><span>POST</span></a>                
+                          </div>
+                          
+                          
                         </div>
                         <!-- Start sidebar widget -->
                         <div class="sidebar-widget">
@@ -450,7 +323,7 @@
                 <h2>Our vision</h2>
                 <div class="line"></div>
               </div>           
-              <p>Passerelles numériques strives for a world where young underprivileged people can have a better life through access to education, training and employment to better leverage their potential and willpower.</p>
+              <p>Passerelles numÃ©riques strives for a world where young underprivileged people can have a better life through access to education, training and employment to better leverage their potential and willpower.</p>
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3">

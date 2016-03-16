@@ -5,8 +5,7 @@
 <html lang="en">
   <head>
     <!--=============================================== 
-    Template Design By WpFreeware Team.
-    Author URI : http://www.wpfreeware.com/
+    
     ====================================================-->
 
     <!-- Basic Page Needs
@@ -94,7 +93,7 @@
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="<%=request.getContextPath()%>/login">Sign in</a></li>
                     <li><a href="<%=request.getContextPath()%>/register">Regiser</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="<%=request.getContextPath()%>/admin">Logout</a></li>
                   </ul>
                 </li>
                 </ul> 
@@ -183,6 +182,8 @@
                <!--row the first -->
                 <div class="row">
                   <!-- Start Single Blog 1-->
+                  
+                 
                   <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="single-Blog">
                       <div class="single-blog-left">
@@ -215,6 +216,8 @@
                       </div>
                     </div>
                   </div>
+                 
+                  
                   <!-- End Single Blog1 -->
                   
                    <!-- Start Single Blog 2-->
@@ -222,7 +225,8 @@
                     <div class="single-Blog">
                       <div class="single-blog-left">
                         <ul class="blog-comments-box">
-                          <li>May <h2>10</h2>2015</li>
+                          <!-- <li>May <h2>10</h2>2015</li> -->
+                          <li><c:out value="${department.id}"/></li>
                           <li><span class="fa fa-eye"></span>1523</li>
                           <li><a href="#"><span class="fa fa-comments"></span>5</a></li>
                         </ul>

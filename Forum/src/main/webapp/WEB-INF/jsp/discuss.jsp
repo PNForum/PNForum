@@ -167,9 +167,13 @@
                               <h2><c:out value="${baidang.tieu_de}"/></h2>
                               <p><c:out value="${baidang.noi_dung}"/></p>
                               <!-- Read more btn -->
+                              
                              <div class="readmore_area">
-                            <a href="#" data-hover="Read More"><span>Read More</span></a>                
-                          </div>
+                            		<a href="<%=request.getContextPath()%>/getbyId?id=${baidang.id}" data-hover="Read More">
+                            		<c:out value="${findByID.id }"></c:out><span>Read More</span></a>                
+                          	 </div>
+                          	 
+                          	 
                             </div>
                           </div>
                         </div>

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   <head>
     <!--=============================================== 
     Template Design By WpFreeware Team.
@@ -20,19 +21,19 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
 
-    <!-- CSS
+     <!-- CSS
     ================================================== -->       
     <!-- Bootstrap css file-->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font awesome css file-->
     <link href="resources/css/font-awesome.min.css" rel="stylesheet">       
     <!-- Default Theme css file -->
-    <link id="switcher" href="resources/css/themes/lite-blue-theme.css" rel="stylesheet">    
+    <link id="switcher" href="resources/css/themes/lite-blue-theme.css" rel="stylesheet">   
     <!-- Slick slider css file -->
     <link href="resources/css/slick.css" rel="stylesheet"> 
 
     <!-- Main structure css file -->
-    <link href="resources/cssstyle.css" rel="stylesheet">
+    <link href="resources/css/style.css" rel="stylesheet">
    
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>  
@@ -115,7 +116,7 @@
                 <ol class="breadcrumb">
                   <li>You are here</li>
                   <li><a href="#">Home</a></li>                  
-                  <li class="active">Blog Single</li>
+                  <li class="active">Detail Pages</li>
                 </ol>
               </div>
             </div>
@@ -145,111 +146,20 @@
                           <div class="single-blog-right">
                             <div class="blog-img">
                               <figure class="blog-figure">
-                               <a href="#"><img alt="img" src="images/9.jpg"></a>
+                               <a href="#"><img alt="img" src="resources/images/9.jpg"></a>
                                 <span class="image-effect"></span>
                               </figure>
                             </div>
                             <div class="blog-author">
                               <ul>
-                                <li>By <a href="#">Dr. Smith</a></li>
-                                <li>In <a href="#">Dental</a></li>
+                                <li>By <a href="#"><c:out value="${baiDangListById.tieu_de}"></c:out></a></li>
+                                <li>In <a href="#"><c:out value="${baiDangListById.tieu_de}"></c:out></a></li>
                                 <li><span class="fa fa-tags"></span><a href="#">Dental</a> <a href="#">Surgery</a> <a href="#">Cardiac</a></li>
                               </ul>
                             </div>
                             <div class="blog-content blog-details">
-                              <h2>Latest Trend Of Medical Dental Department</h2>                              
-                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident</p> 
-                              <blockquote>                            
-                                Duis erat purus, tincidunt vel ullamcorper ut, consequat tempus nibh. Proin condimentum risus ligula, dignissim mollis tortor hendrerit vel.
-                              </blockquote>
-                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly <a href="#">believable</a>.</p>
-                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident</p>
-                              <a href="#">Link Text</a>
-                              <h3>Tabel</h3> 
-                              <table class="table table-hover">
-                                <thead>
-                                  <tr>
-                                    <th>Sl</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">1</th>
-                                    <td>Smith</td>
-                                    <td>Jacob</td>
-                                    <td>Dan</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>Smith</td>
-                                    <td>Jacob</td>
-                                    <td>Dan</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>Smith</td>
-                                    <td>Jacob</td>
-                                    <td>Dan</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                              <h3>Order list</h3>
-                              <ol>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Consectetur adipiscing elit</li>
-                                <li>Integer molestie lorem at massa</li>
-                                <li>Facilisis in pretium nisl aliquet</li>
-                                <li>Nulla volutpat aliquam velit</li>
-                                <li>Faucibus porta lacus fringilla vel</li>
-                                <li>Aenean sit amet erat nunc</li>
-                                <li>Eget porttitor lorem</li>
-                              </ol>
-                              <h3>Check Box Example</h3>
-                              <div class="checkbox">
-                                <label>
-                                  <input type="checkbox" value="">
-                                  Option one is this and that&mdash;be sure to include why it's great
-                                </label>
-                              </div>
-                              <div class="checkbox disabled">
-                                <label>
-                                  <input type="checkbox" value="" disabled>
-                                  Option two is disabled
-                                </label>
-                              </div>
-                              <h3>Radio Option</h3>
-                              <div class="radio">
-                                <label>
-                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                  Option one is this and that&mdash;be sure to include why it's great
-                                </label>
-                              </div>
-                              <div class="radio">
-                                <label>
-                                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                  Option two can be something else and selecting it will deselect option one
-                                </label>
-                              </div>
-                              <div class="radio disabled">
-                                <label>
-                                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-                                  Option three is disabled
-                                </label>
-                              </div>
-                              <h3>This is example of H3</h3>
-                              <h4>This is example of H4</h4>
-                              <h5>This is example of H5</h5>
-                              <h6>This is example of H6</h6>
-                              <ul>
-                               <li><i class="fa fa-check"></i>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</li>
-                               <li><i class="fa fa-check"></i>Lorem Ipsum generators</li>
-                               <li><i class="fa fa-check"></i>There are many variations of passages</li>
-                               <li><i class="fa fa-check"></i>The uses a dictionary of over 200 Latin words</li>
-                               <li><i class="fa fa-check"></i>Proin condimentum risus ligula</li>
-                              </ul>
+                              <h2><c:out value="${baiDangListById.tieu_de}"></c:out></h2>                              
+                              <p><c:out value="${baiDangListById.noi_dung}"></c:out></p> 
                               <!-- Start Social Share-->
                               <div class="social-share">
                                <h3>Share is Awesome</h3>
@@ -356,7 +266,7 @@
                                     <li>
                                       <div class="media">
                                         <div class="media-left">    
-                                            <img alt="img" src="images/doctor-2.jpg" class="media-object news-img">      
+                                            <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
                                         </div>
                                         <div class="media-body">
                                          <h4 class="author-name">Dr. Jack Johnson</h4>
@@ -369,7 +279,7 @@
                                     <li>
                                       <div class="media">
                                         <div class="media-left">    
-                                            <img alt="img" src="images/doctor-2.jpg" class="media-object news-img">      
+                                            <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
                                         </div>
                                         <div class="media-body">
                                          <h4 class="author-name">Dr. Jack Johnson</h4>
@@ -383,7 +293,7 @@
                                       <li class="author-comments">
                                         <div class="media">
                                           <div class="media-left">    
-                                              <img alt="img" src="images/doctor-2.jpg" class="media-object news-img">      
+                                              <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
                                           </div>
                                           <div class="media-body">
                                            <h4 class="author-name">Dr. Jack Johnson</h4>
@@ -398,7 +308,7 @@
                                         <li>
                                           <div class="media">
                                             <div class="media-left">    
-                                                <img alt="img" src="images/doctor-2.jpg" class="media-object news-img">      
+                                                <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
                                             </div>
                                             <div class="media-body">
                                              <h4 class="author-name">Dr. Jack Johnson</h4>
@@ -413,7 +323,7 @@
                                     <li>
                                       <div class="media">
                                         <div class="media-left">    
-                                            <img alt="img" src="images/doctor-2.jpg" class="media-object news-img">      
+                                            <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
                                         </div>
                                         <div class="media-body">
                                          <h4 class="author-name">Dr. Jack Johnson</h4>
@@ -492,7 +402,7 @@
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#" class="news-img">
-                                    <img alt="img" src="images/small-blog-img1.jpg" class="media-object">
+                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
                                   </a>
                                 </div>
                                 <div class="media-body">
@@ -505,7 +415,7 @@
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#" class="news-img">
-                                    <img alt="img" src="images/small-blog-img2.jpg" class="media-object">
+                                    <img alt="img" src="resources/images/small-blog-img2.jpg" class="media-object">
                                   </a>
                                 </div>
                                 <div class="media-body">
@@ -518,7 +428,7 @@
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#" class="news-img">
-                                    <img alt="img" src="images/small-blog-img1.jpg" class="media-object">
+                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
                                   </a>
                                 </div>
                                 <div class="media-body">
@@ -537,7 +447,7 @@
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#" class="news-img">
-                                    <img alt="img" src="images/small-blog-img1.jpg" class="media-object">
+                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
                                   </a>
                                 </div>
                                 <div class="media-body">
@@ -550,7 +460,7 @@
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#" class="news-img">
-                                    <img alt="img" src="images/small-blog-img2.jpg" class="media-object">
+                                    <img alt="img" src="resources/images/small-blog-img2.jpg" class="media-object">
                                   </a>
                                 </div>
                                 <div class="media-body">
@@ -563,7 +473,7 @@
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#" class="news-img">
-                                    <img alt="img" src="images/small-blog-img1.jpg" class="media-object">
+                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
                                   </a>
                                 </div>
                                 <div class="media-body">

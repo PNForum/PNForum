@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -138,14 +139,17 @@
                         <!-- Start sidebar widget -->
                         <div class="sidebar-widget">
                           <h3>Top Questions</h3>
+                           <c:forEach items="${traodoiList}" var = "traodoi">
                           <ul class="popular-tab">
                             <li>
                               <div class="media">
                                 <div class="col-md-1">
                                   <a href="#">
-                                    Views
+                                    Views                                                      
                                     <div>
-                                       <span class="fa fa-comments"></span> 29
+                                       <span class="fa fa-comments"></span><c:out value = "${traodoi.luot_thich}"/>
+                                                                        
+                                       
                                     </div>
                                     
                                   </a>
@@ -160,19 +164,24 @@
                                 </div>
                                 <div class="col-md-1">
                                   <a href="#" class="news-img">
-                                    Time
-                                    <span class="feed-date">27.02.15</span>
+                                    Date
+                                    <span class="feed-date"> </span>  
+                                                                                                      
+                                    <c:out value="${traodoi.ngay_dang_bai}"></c:out>
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                 <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\>
-                                     <p>Vài dòng miêu tả chi tiết vô đây nữa</p></a>
+                                 <a href="blog-single.html">
+                                 <c:out value="${traodoi.noi_dung}"></c:out>
+                                 </p></a>
                                  <ul class="tag-nav">
                                      <div class="col-md-8">
                                      <li><a href="#">tag 1</a><a href="#">tag 2</a><a href="#">tag 3</a><a class="pull-right" href="#">readmore...</a></li>
                                      </div>
                                   
                                 </ul>
+                                 
+                                 
                                 <div>
                                     
                                 </div>
@@ -180,13 +189,14 @@
                               </div>
                             </li>
                                              
-                            <li>
+                             <%--<li>
                               <div class="media">
                                 <div class="col-md-1">
                                   <a href="#">
                                     Views
                                     <div>
-                                       <span class="fa fa-comments"></span> 29
+                                       <span class="fa fa-comments"></span> 
+                                       <c:out value="${traodoi.luot_thich}"></c:out>
                                     </div>
                                     
                                   </a>
@@ -206,8 +216,9 @@
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                 <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\>
-                                     <p>Vài dòng miêu tả chi tiết vô đây nữa</p></a>
+                                 <a href="blog-single.html">
+                                 <c:out value="${traodoi.noi_dung}"></c:out>
+                                 </a>
                                  <ul class="tag-nav">
                                      <div class="col-md-8">
                                      <li><a href="#">tag 1</a><a href="#">tag 2</a><a href="#">tag 3</a><a class="pull-right" href="#">readmore...</a></li>
@@ -227,7 +238,8 @@
                                   <a href="#">
                                     Views
                                     <div>
-                                       <span class="fa fa-comments"></span> 29
+                                       <span class="fa fa-comments"></span> 
+                                       <c:out value="${traodoi.luot_thich}"></c:out>
                                     </div>
                                     
                                   </a>
@@ -247,8 +259,8 @@
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                 <a href="blog-single.html">Viết mô tả ngắn về một vài câu hỏi vào đây nhak, :)<br\>
-                                     <p>Vài dòng miêu tả chi tiết vô đây nữa</p></a>
+                                 <a href="blog-single.html">
+								</a>
                                  <ul class="tag-nav">
                                      <div class="col-md-8">
                                      <li><a href="#">tag 1</a><a href="#">tag 2</a><a href="#">tag 3</a><a class="pull-right" href="#">readmore...</a></li>
@@ -262,7 +274,7 @@
                               </div>
                             </li>
                                     
-                                    <li>
+                                   <li>
                               <div class="media">
                                 <div class="col-md-1">
                                   <a href="#">
@@ -383,8 +395,9 @@
                                 </div>
                                 </div>
                               </div>
-                            </li>
+                            </li>--%> 
                           </ul>
+                          </c:forEach>
                         </div>
 
                       </aside>

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
@@ -15,74 +14,72 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-
+	<link href="resources/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="resources/css/simple-sidebar.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/menu_admin.css" rel="stylesheet">
+   	<script src="resources/js/jquery.js"></script>    
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src='resources/tinymce/js/tinymce/tinymce.min.js'></script>
+    
 </head>
 
 <body>
+	<div class="nav-side-menu">
+    <div class="brand">POST</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list">
+  
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a href="#">
+                  <i class="fa fa-users fa-lg"></i> User name
+                  </a>
+                </li>
 
-    <div id="wrapper">
+                <li  data-toggle="collapse" data-target="#products" class="collapsed active">
+                  <a href="#"><i class="fa fa-gift fa-lg"></i> Tag & categories <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="products">
+                    <li class="active"><a href="#">CSS3 Animation</a></li>
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">Spring MVC</a></li>
+                    <li><a href="#">Swing</a></li>
+                    <li><a href="#">PHP core</a></li>
+                    <li><a href="#">Cake PHP</a></li>
+                    <li><a href="#">HTML/CSS/Java script</a></li>
+                    <li><a href="#">Testing</a></li>
+                    <li><a href="#">OOP</a></li>
+                    <li><a href="#">C/C++</a></li>
+                </ul>
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Options
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Tags</a>
-                </li>
-                <li>
-                    <a href="#">Image</a>
-                </li>
-                <li>
-                    <a href="#">Draft</a>
-                </li>
-                <li>
-                    <a href="#">Push</a>
-                </li>
-                <li>
-                    <a href="#">Post Format</a>
-                </li>
-                <li>
-                    <a href="#">More Options</a>
-                </li>
+
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                  <a href="#"><i class="fa fa-globe fa-lg"></i> Features Images <span class="arrow"></span></a>
+                </li>  
+                <ul class="sub-menu collapse" id="service">
+                  <input type="file" class="form-control">
+                </ul>
+				<div class="readmore_area">
+                            <a href="#" data-hover="Publish"><span>Publish</span></a>                
+                 </div>
             </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>POST</h1>  <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
-
+     </div>
+</div>
+	<div class="post-content" style="width:70%; float:right;">
+		<form method="post">
+		  	<textarea id="mytextarea">Hello, World!</textarea>
+		  	<button type="submit" id="savePost">Save</button>
+		</form>
+	</div>
 </body>
-
+<script>
+    	tinymce.init({ selector:'#mytextarea' });
+    	$('#savePost').click(function(event) {
+    		event.preventDefault();
+    		var all = $('#mytextarea_ifr').find('body');
+    		console.log('ghagh', all);
+    	});
+    </script>
 </html>

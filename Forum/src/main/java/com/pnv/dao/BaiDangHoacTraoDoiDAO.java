@@ -10,7 +10,7 @@ public interface BaiDangHoacTraoDoiDAO {
 
     public void delete(BaiDangHoacTraoDoi bdhtd);
 
-    public BaiDangHoacTraoDoi findByDepartmentId(int id);
+    public BaiDangHoacTraoDoi findByBaiDangId(int id);
     
 	public List<BaiDangHoacTraoDoi> findAll();
 	 
@@ -19,4 +19,5 @@ public interface BaiDangHoacTraoDoiDAO {
 	public List<BaiDangHoacTraoDoi> displayByBestLikee();
 	
 	public List<BaiDangHoacTraoDoi> displayPostLatest();
+
 }

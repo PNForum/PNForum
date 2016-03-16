@@ -21,6 +21,7 @@
    	<script src="resources/js/jquery.js"></script>    
     <script src="resources/js/bootstrap.min.js"></script>
     <script src='resources/tinymce/js/tinymce/tinymce.min.js'></script>
+    
 </head>
 
 <body>
@@ -66,7 +67,19 @@
             </ul>
      </div>
 </div>
-
+	<div class="post-content" style="width:70%; float:right;">
+		<form method="post">
+		  	<textarea id="mytextarea">Hello, World!</textarea>
+		  	<button type="submit" id="savePost">Save</button>
+		</form>
+	</div>
 </body>
-
+<script>
+    	tinymce.init({ selector:'#mytextarea' });
+    	$('#savePost').click(function(event) {
+    		event.preventDefault();
+    		var all = $('#mytextarea_ifr').find('body');
+    		console.log('ghagh', all);
+    	});
+    </script>
 </html>
