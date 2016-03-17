@@ -1,83 +1,76 @@
 package com.pnv.models;
 
-import java.io.Serializable;
+import java.io.Serializable;	
 import java.util.List;
-
+import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
-
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@SuppressWarnings("serial")
+
 @Entity
 @Table(name = "BAI_DANG_HOAC_TRAO_DOI")
 public class BaiDangHoacTraoDoi implements Serializable{
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = IDENTITY)
 	 @Column(name = "id", unique = true, nullable = false)
 	 private Integer id;
 	 
-	 @JsonIgnore
 	 @OneToMany(targetEntity = BinhLuan.class ,fetch = FetchType.EAGER, mappedBy = "bai_dang_hoac_trao_doi")
 	 private List<BinhLuan> binh_luan;
 	 
-	 @JsonIgnore
 	 @OneToMany(targetEntity = DinhKem.class,fetch = FetchType.EAGER, mappedBy = "bai_dang_hoac_trao_doi")
 	 private List<DinhKem> dinh_kem;
 	 
 	 @ManyToOne(fetch = FetchType.EAGER, targetEntity = ChuDe.class)
 	 @JoinColumn(name = "id_chu_de", referencedColumnName = "id", nullable = false)
-	 @JsonIgnore
 	 private ChuDe chu_de;
 	 
-	 @Column(name = "tieu_de", nullable = false, length = 255)
+	 @Column(name = "tieu_de")
 	 @NotEmpty
 	 private String tieu_de;
 	 
 	 @Column(name  ="the_loai_bai", nullable  =false)
-	 @NotEmpty
+	 
 	 private Integer the_loai_bai;
 	 
-	 @Column(name = "noi_dung", nullable = false, length = 20000)
+	 @Column(name = "noi_dung")
 	 @NotEmpty
 	 private String noi_dung;
 	 
 	 @Column(name = "luot_thich", nullable = false)
-	 @NotEmpty
 	 private Integer luot_thich;
 	 
 	 @Column(name = "ngay_dang_bai", nullable = false)
-	 @NotEmpty
 	 private String ngay_dang_bai;
 	 
 	 @Column(name ="spam", nullable = false)
-	 @NotEmpty
 	 private Integer spam;
 	 
 	 @Column(name ="is_active", nullable = false)
-	 @NotEmpty
 	 private Integer isActive;
 
 	 @Column(name ="luot_xem", nullable = false)
-	 @NotEmpty
 	 private Integer luot_xem;
 	 
-	
+	 @Column(name ="anh")
+	 @NotEmpty
+	 private String anh;
 
+	
 	public BaiDangHoacTraoDoi(Integer id, List<BinhLuan> binh_luan, List<DinhKem> dinh_kem, ChuDe chu_de,
 			String tieu_de, Integer the_loai_bai, String noi_dung, Integer luot_thich, String ngay_dang_bai,
-			Integer spam, Integer isActive, Integer luot_xem) {
+			Integer spam, Integer isActive, Integer luot_xem, String anh) {
 		this.id = id;
 		this.binh_luan = binh_luan;
 		this.dinh_kem = dinh_kem;
@@ -90,9 +83,10 @@ public class BaiDangHoacTraoDoi implements Serializable{
 		this.spam = spam;
 		this.isActive = isActive;
 		this.luot_xem = luot_xem;
+		this.anh = anh;
 	}
-	
-	
+
+
 
 	public Integer getLuot_xem() {
 		return luot_xem;
@@ -114,7 +108,7 @@ public class BaiDangHoacTraoDoi implements Serializable{
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
+	@JsonIgnore
 	public List<BinhLuan> getBinh_luan() {
 		return binh_luan;
 	}
@@ -122,7 +116,7 @@ public class BaiDangHoacTraoDoi implements Serializable{
 	public void setBinh_luan(List<BinhLuan> binh_luan) {
 		this.binh_luan = binh_luan;
 	}
-
+	@JsonIgnore
 	public List<DinhKem> getDinh_kem() {
 		return dinh_kem;
 	}
@@ -193,6 +187,18 @@ public class BaiDangHoacTraoDoi implements Serializable{
 
 	public void setIsActive(Integer isActive) {
 		this.isActive = isActive;
+	}
+
+
+
+	public String getAnh() {
+		return anh;
+	}
+
+
+
+	public void setAnh(String anh) {
+		this.anh = anh;
 	}
 
 	

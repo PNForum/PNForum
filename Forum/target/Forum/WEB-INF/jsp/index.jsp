@@ -93,7 +93,7 @@
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="<%=request.getContextPath()%>/login">Sign in</a></li>
                     <li><a href="<%=request.getContextPath()%>/register">Regiser</a></li>
-                    <li><a href="<%=request.getContextPath()%>/admin">Logout</a></li>
+                    <li><a href="#">Logout</a></li>
                   </ul>
                 </li>
                 </ul> 

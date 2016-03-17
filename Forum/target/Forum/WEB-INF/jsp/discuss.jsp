@@ -4,49 +4,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
   <head>
-    <!--=============================================== 
-    Template Design By WpFreeware Team.
-    Author URI : http://www.wpfreeware.com/
-    ====================================================-->
-
-    <!-- Basic Page Needs
-    ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <title>PN Forum: Discuss</title>
-
-    <!-- Mobile Specific Metas
-    ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
-
-    <!-- CSS
-    ================================================== -->       
-    <!-- Bootstrap css file-->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font awesome css file-->
-    <link href="resources/css/font-awesome.min.css" rel="stylesheet">       
-    <!-- Default Theme css file -->
-    <link id="switcher" href="resources/css/themes/lite-blue-theme.css" rel="stylesheet">   
-    <!-- Slick slider css file -->
-    <link href="resources/css/slick.css" rel="stylesheet"> 
-
-    <!-- Main structure css file -->
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+    <link id="switcher" href="resources/css/themes/lite-blue-theme.css" rel="stylesheet">
+    <link href="resources/css/slick.css" rel="stylesheet">
     <link href="resources/css/style.css" rel="stylesheet">
-   
-    <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>  
     <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>  
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:900' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]--> 
   </head>
   <body>    
     <!-- BEGAIN PRELOADER -->
@@ -91,7 +61,7 @@
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="<%=request.getContextPath()%>/login">Sign in</a></li>
                     <li><a href="<%=request.getContextPath()%>/register">Regiser</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="<%=request.getContextPath()%>/admin">Logout</a></li>
                   </ul>
                 </li>
                 </ul> 
@@ -272,7 +242,7 @@
                           <h3>Post</h3>
                           <p>Do you want to post something.<br/> <a href="#">Click here</a></p>
                           <div class="readmore_area">
-                            <a href="<%=request.getContextPath()%>/post" data-hover="POST"><span>POST</span></a>                
+                            <a href="<%=request.getContextPath()%>/add" data-hover="POST"><span>POST</span></a>                
                           </div>
                           
                           

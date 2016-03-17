@@ -114,7 +114,6 @@
                         <div class="single-Blog">
                           <div class="single-blog-left">
                             <ul class="blog-comments-box">
-                              <!-- <li>May <h2>10</h2>2015</li> -->
                               <li><c:out value="${baidang.ngay_dang_bai}"/></li>
                               <li><span class="fa fa-eye"></span><c:out value="${baidang.luot_xem}"/></li>
                               <li><a href="#"><span class="fa fa-comments"></span></span><c:out value="${baidang.luot_xem}"/></a></li>
@@ -123,7 +122,7 @@
                           <div class="single-blog-right">
                             <div class="blog-img">
                               <figure class="blog-figure">
-                               <a href="#"><img alt="img" src="resources/images/9.jpg"></a>
+                               <a href="#"><img alt="img" src="<c:url value="/resources/images/${baidang.anh}" />"></a>
                                 <span class="image-effect"></span>
                               </figure>
                             </div>
@@ -242,7 +241,7 @@
                           <h3>Post</h3>
                           <p>Do you want to post something.<br/> <a href="#">Click here</a></p>
                           <div class="readmore_area">
-                            <a href="<%=request.getContextPath()%>/post" data-hover="POST"><span>POST</span></a>                
+                            <a href="<%=request.getContextPath()%>/add" data-hover="POST"><span>POST</span></a>                
                           </div>
                           
                           

@@ -7,10 +7,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.pnv.models.BaiDangHoacTraoDoi;
-import com.pnv.models.BinhLuan;
-import com.pnv.models.ChuDe;
 
 @Service
 @Transactional

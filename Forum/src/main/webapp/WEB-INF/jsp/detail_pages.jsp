@@ -102,7 +102,7 @@
                 <div class="blogArchive-area">
                   <div class="row">
                     <!-- Start Blog Content -->
-                    <div class="col-md-9 col-sm-8">                     
+                    <div class="col-md-12 col-sm-12">                     
                       <div class="blog-content">
                         <!-- Start Single Blog -->
                         <div class="single-Blog">
@@ -257,103 +257,7 @@
                       </div>
                       
                     <!-- Start Right Side bar -->
-                    <div class="col-md-3 col-sm-4">
-                      <aside class="sidebar">
-                        <!-- Start sidebar widget -->
-                        <div class="sidebar-widget">
-                          <h3>Latest Posts</h3>
-                          <ul class="popular-tab">
-                          
-                            <c:forEach items = "${byDate}" var ="date"> 
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#" class="news-img">
-                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                 <a href="#"><c:out value="${date.tieu_de}"/></a>
-                                 <span><c:out value="${date.tieu_de}"/></span>
-                                </div>
-                              </div>
-                            </li>
-                           </c:forEach>
-                                           
-                          </ul>
-                        </div>
-                        <!-- Start sidebar widget -->
-                        <div class="sidebar-widget">
-                          <h3>Most Viewed</h3>
-                          <ul class="popular-tab">
-                          <c:forEach items = "${ByLike}" var ="ByLike"> 
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#" class="news-img">
-                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                 <a href="#"><c:out value = "${ByLike.tieu_de }"/> </a>
-                                 <span class="feed-date"><c:out value = "${ByLike.id }"/></span>
-                                </div>
-                              </div>
-                            </li>
-                          </c:forEach>           
-                          </ul>
-                        </div>
-                        <!-- Start sidebar widget -->
-                        <div class="sidebar-widget">
-                          <h3>Tags</h3>
-                          <ul class="tag-nav">
-                               <li><a href="#">OOP</a></li>
-                               <li><a href="#">Swing</a></li>
-                               <li><a href="#">.NET</a></li>
-                              <li><a href="#">PHP</a></li>
-                              <li><a href="#">Android</a></li>
-                              <li><a href="#">Spring</a></li>
-                              <li><a href="#">Database</a></li>
-                              <li><a href="#">JSP/Servlet</a></li>
-                              <li><a href="#">Cake</a></li>
-                              <li><a href="#">HTML/CSS</a></li>
-                  
-                </ul>
-                        </div>
-                        <!-- Start sidebar widget -->
-                        <div class="sidebar-widget">
-                          <h3>Post</h3>
-                          <p>Do you want to post something.<br/> <a href="#">Click here</a></p>
-                          <div class="readmore_area">
-                            <a href="<%=request.getContextPath()%>/post" data-hover="POST"><span>POST</span></a>                
-                          </div>
-                          
-                          
-                        </div>
-                        <!-- Start sidebar widget -->
-                        <div class="sidebar-widget">
-                          <h3>Archives</h3>
-                          <ul class="archives">
-                            <li><a title="May 2015" href="#">May 2015<span>2</span></a></li>
-                            <li><a title="April 2015" href="#">April 2015<span>5</span></a></li>
-                            <li><a title="March 2015" href="#">March 2015<span>10</span></a></li>
-                          </ul>
-                        </div>
-                        <!-- Start sidebar widget -->
-                        <div class="sidebar-widget">
-                          <h3>Categories</h3>
-                          <ul>
-                            <li><a href="#"><span class="fa fa-angle-right"></span>Dental</a></li>
-                            <li><a href="#"><span class="fa fa-angle-right"></span>Surgery</a></li>
-                            <li><a href="#"><span class="fa fa-angle-right"></span>Pediatric</a></li>
-                            <li><a href="#"><span class="fa fa-angle-right"></span>Cardiac</a></li>
-                            <li><a href="#"><span class="fa fa-angle-right"></span>Ophthalmology</a></li>
-                            <li><a href="#"><span class="fa fa-angle-right"></span>Diabetes</a></li>
-                          </ul>
-                        </div>
-                      </aside>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
