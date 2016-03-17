@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>PNForum | Admin</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -21,7 +23,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>A</b>LT</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Admin</b>LTE</span>
+          <span class="logo-lg"><b>Admin Pages </span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -44,65 +46,14 @@
                     <ul class="menu">
                       <li><!-- start message -->
                         <a href="#">
-                          <div class="pull-left">
-                            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                          </div>
                           <h4>
-                            Support Team
+                            Title
                             <small><i class="fa fa-clock-o"></i> 5 mins</small>
                           </h4>
-                          <p>Why not buy a new awesome theme?</p>
-                        </a>
-                      </li><!-- end message -->
-                      <li>
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                          </div>
-                          <h4>
-                            AdminLTE Design Team
-                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                          </h4>
-                          <p>Why not buy a new awesome theme?</p>
+                          <p>Content message</p>
                         </a>
                       </li>
-                      <li>
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                          </div>
-                          <h4>
-                            Developers
-                            <small><i class="fa fa-clock-o"></i> Today</small>
-                          </h4>
-                          <p>Why not buy a new awesome theme?</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                          </div>
-                          <h4>
-                            Sales Department
-                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                          </h4>
-                          <p>Why not buy a new awesome theme?</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                          </div>
-                          <h4>
-                            Reviewers
-                            <small><i class="fa fa-clock-o"></i> 2 days</small>
-                          </h4>
-                          <p>Why not buy a new awesome theme?</p>
-                        </a>
-                      </li>
-                    </ul>
+                      </ul>
                   </li>
                   <li class="footer"><a href="#">See All Messages</a></li>
                 </ul>

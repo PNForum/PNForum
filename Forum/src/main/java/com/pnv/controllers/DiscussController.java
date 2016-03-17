@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.pnv.dao.BaiDangHoacTraoDoiDAO;
+import com.pnv.dao.BinhLuanDao;
 import com.pnv.dao.ChuDeDao;
 import com.pnv.models.BaiDangHoacTraoDoi;
+import com.pnv.models.BinhLuan;
 import com.pnv.models.ChuDe;
 
 @Controller
@@ -19,7 +21,12 @@ public class DiscussController {
 
 	@Autowired
 	private BaiDangHoacTraoDoiDAO baiDangDao;
+	
+	@Autowired
 	private ChuDeDao chudeDao;
+	
+	@Autowired
+	private BinhLuanDao binhLuanDao;
 	
 	public DiscussController() {
     }
@@ -33,14 +40,29 @@ public class DiscussController {
         map.put("diplayByLike", diplayByLike);
         
         List<BaiDangHoacTraoDoi> diplaybyDate = baiDangDao.displayByBestLikee();
-        map.put("diplaybyDate", diplayByLike);
+        map.put("diplaybyDate", diplaybyDate);
         return "discuss";
+    }
+	
+	public String viewDetailPage(@RequestParam(value = "id", required = true) int id_chu_de, ModelMap map) {
+        List<BaiDangHoacTraoDoi> ByLike = baiDangDao.displayByBestLikee();
+        map.put("ByLike", ByLike);
+        
+        List<BaiDangHoacTraoDoi> byDate = baiDangDao.displayPostLatest();
+        map.put("byDate", byDate);
+        
+        List<BaiDangHoacTraoDoi> similarPost = baiDangDao.PostSimilar(id_chu_de);
+        map.put("similarPost", similarPost);
+        return "detail_pages";
     }
 	
 	@RequestMapping(value = "/getbyId", method = RequestMethod.GET)
     public String getProductByType(@RequestParam(value = "id", required = true) int id, ModelMap map) {
         BaiDangHoacTraoDoi baiDangListById = baiDangDao.findByBaiDangId(id);
         map.addAttribute("baiDangListById", baiDangListById);
+
+        List<BinhLuan> blList = binhLuanDao.getBinhLuan(id);
+        map.put("blList", blList);
         return "detail_pages";
     }
 

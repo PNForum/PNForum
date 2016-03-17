@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.pnv.models.BaiDangHoacTraoDoi;
 import com.pnv.models.BinhLuan;
 
 @Service
@@ -28,16 +29,14 @@ public class BinhLuanDaoImpl implements BinhLuanDao{
 
 	public List<BinhLuan> findAll() {
 		 List<BinhLuan> blList = sessionFactory.getCurrentSession().createQuery("from BinhLuan").list();
-
 	        return blList;
 	}
 
-	public BinhLuan findByDepartmentId(int id) {
-		 BinhLuan bl = null;
-	      
-         bl = (BinhLuan) sessionFactory.getCurrentSession().get(BinhLuan.class, id);
-    
-     return bl;
+
+
+	public List<BinhLuan> getBinhLuan(int id) {
+		List<BinhLuan> bl = sessionFactory.getCurrentSession().createQuery("from BinhLuan where id_bai_dang_hoac_trao_doi = '"+id+"'").list();
+		return bl;
 	}
 
 }

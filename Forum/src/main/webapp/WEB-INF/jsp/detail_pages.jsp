@@ -3,49 +3,19 @@
 <html lang="en">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   <head>
-    <!--=============================================== 
-    Template Design By WpFreeware Team.
-    Author URI : http://www.wpfreeware.com/
-    ====================================================-->
-
-    <!-- Basic Page Needs
-    ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <title>PN Forum: Detail</title>
-
-    <!-- Mobile Specific Metas
-    ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
-
-     <!-- CSS
-    ================================================== -->       
-    <!-- Bootstrap css file-->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font awesome css file-->
     <link href="resources/css/font-awesome.min.css" rel="stylesheet">       
-    <!-- Default Theme css file -->
     <link id="switcher" href="resources/css/themes/lite-blue-theme.css" rel="stylesheet">   
-    <!-- Slick slider css file -->
     <link href="resources/css/slick.css" rel="stylesheet"> 
-
-    <!-- Main structure css file -->
     <link href="resources/css/style.css" rel="stylesheet">
-   
-    <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>  
     <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>   
     <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:900' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]--> 
   </head>
   <body>    
     <!-- BEGAIN PRELOADER -->
@@ -183,156 +153,50 @@
                                  <h4 class="navg-title">Next Title Text</h4>
                                </div>
                              </div>
-                              <!-- Start Post Author -->
-                              <div class="post-author">
-                                <h3>About Author</h3>
-                                <div class="media">
-                                  <div class="media-left">
-                                    <a class="news-img" href="#">
-                                      <img class="media-object" src="images/doctor-2.jpg" alt="img">
-                                    </a>
-                                  </div>
-                                  <div class="media-body">
-                                     <a class="author-name" href="#">Dr. Jack Johnson</a>
-                                     <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-                                     <a href="#" class="author-morepost">View more post</a>
-                                  </div>
-                                </div>
-                              </div>
+                              
                               <!-- Start Similar News -->
                               <div class="similar-post">
+                              <c:forEach items="${similarPost}" var = "similar"> 
                                 <h2>Similar News  </h2>
                                  <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                       <div class="media">
-                                          <div class="media-left">
-                                            <a class="news-img" href="#">
-                                              <img class="media-object" src="images/small-blog-img1.jpg" alt="img">
-                                            </a>
-                                          </div>
-                                          <div class="media-body">
-                                           <a href="blog-single.html">Dummy text of the Medical Post</a>
-                                           <span class="feed-date">27.02.15</span>
-                                          </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6">
-                                      <div class="media">
                                         <div class="media-left">
                                           <a class="news-img" href="#">
                                             <img class="media-object" src="images/small-blog-img1.jpg" alt="img">
                                           </a>
                                         </div>
                                         <div class="media-body">
-                                         <a href="blog-single.html">Dummy text of the Medical Post</a>
-                                         <span class="feed-date">27.02.15</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6">
-                                      <div class="media">
-                                          <div class="media-left">
-                                            <a class="news-img" href="#">
-                                              <img class="media-object" src="images/small-blog-img1.jpg" alt="img">
-                                            </a>
-                                          </div>
-                                          <div class="media-body">
-                                           <a href="blog-single.html">Dummy text of the Medical Post</a>
-                                           <span class="feed-date">27.02.15</span>
-                                          </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6">
-                                      <div class="media">
-                                        <div class="media-left">
-                                          <a class="news-img" href="#">
-                                            <img class="media-object" src="images/small-blog-img1.jpg" alt="img">
-                                          </a>
-                                        </div>
-                                        <div class="media-body">
-                                         <a href="blog-single.html">Dummy text of the Medical Post</a>
-                                         <span class="feed-date">27.02.15</span>
+                                         <a href="#"><c:out value="${similar.tieu_de}"></c:out></a>
+                                         <span class="feed-date"><c:out value="${similar.ngay_dang_bai}"></c:out></span>
                                         </div>
                                       </div>
                                    </div>
                                   </div>
+                                </c:forEach>
                                 </div>
-                              </div>
                               <!-- Start Comments  -->
                               <div class="comments-area">
-                                <h3 class="comments-title">5 Comments</h3>
+                                <h3 class="comments-title"><c:out value="${blList.size()}"></c:out> Comments</h3>
+                                
                                 <div class="comments">
                                   <ul class="commentlist">
+                                 <c:forEach items="${blList}" var="bl">
                                     <li>
                                       <div class="media">
                                         <div class="media-left">    
                                             <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
                                         </div>
                                         <div class="media-body">
-                                         <h4 class="author-name">Dr. Jack Johnson</h4>
-                                         <span class="comments-date"> May 16, 2015 / 10:29 am</span>
-                                         <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+                                         <h4 class="author-name">User</h4>
+                                         <span class="comments-date"><c:out value="${bl.ngay}"></c:out></span>
+                                         <p><c:out value="${bl.noi_dung}"></c:out></p>
                                          <a class="reply-btn" href="#">Reply</a>
                                         </div>
                                       </div>
+                                      
                                     </li>
-                                    <li>
-                                      <div class="media">
-                                        <div class="media-left">    
-                                            <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
-                                        </div>
-                                        <div class="media-body">
-                                         <h4 class="author-name">Dr. Jack Johnson</h4>
-                                         <span class="comments-date"> May 16, 2015 / 10:29 am</span>
-                                         <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-                                         <a class="reply-btn" href="#">Reply</a>
-                                        </div>
-                                      </div>
-                                    </li>
-                                    <ul class="children">
-                                      <li class="author-comments">
-                                        <div class="media">
-                                          <div class="media-left">    
-                                              <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
-                                          </div>
-                                          <div class="media-body">
-                                           <h4 class="author-name">Dr. Jack Johnson</h4>
-                                           <span class="comments-date"> May 16, 2015 / 10:29 am</span>
-                                           <span class="author-tag">Author</span>
-                                           <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-                                           <a class="reply-btn" href="#">Reply</a>
-                                          </div>
-                                        </div>
-                                      </li>
-                                      <ul class="children">
-                                        <li>
-                                          <div class="media">
-                                            <div class="media-left">    
-                                                <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
-                                            </div>
-                                            <div class="media-body">
-                                             <h4 class="author-name">Dr. Jack Johnson</h4>
-                                             <span class="comments-date"> May 16, 2015 / 10:29 am</span>
-                                             <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-                                             <a class="reply-btn" href="#">Reply</a>
-                                            </div>
-                                          </div>
-                                        </li>
-                                      </ul>
-                                    </ul>
-                                    <li>
-                                      <div class="media">
-                                        <div class="media-left">    
-                                            <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
-                                        </div>
-                                        <div class="media-body">
-                                         <h4 class="author-name">Dr. Jack Johnson</h4>
-                                         <span class="comments-date"> May 16, 2015 / 10:29 am</span>
-                                         <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-                                         <a class="reply-btn" href="#">Reply</a>
-                                        </div>
-                                      </div>
-                                    </li>
+                                    </c:forEach>
                                   </ul>
                                 </div>
                               </div>
@@ -391,6 +255,7 @@
                           </div>                     
                         </div>
                       </div>
+                      
                     <!-- Start Right Side bar -->
                     <div class="col-md-3 col-sm-4">
                       <aside class="sidebar">
@@ -398,6 +263,8 @@
                         <div class="sidebar-widget">
                           <h3>Latest Posts</h3>
                           <ul class="popular-tab">
+                          
+                            <c:forEach items = "${byDate}" var ="date"> 
                             <li>
                               <div class="media">
                                 <div class="media-left">
@@ -406,43 +273,20 @@
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                 <a href="blog-single.html">Dummy text of the Medical Post</a>
-                                 <span class="feed-date">27.02.15</span>
+                                 <a href="#"><c:out value="${date.tieu_de}"/></a>
+                                 <span><c:out value="${date.tieu_de}"/></span>
                                 </div>
                               </div>
                             </li>
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#" class="news-img">
-                                    <img alt="img" src="resources/images/small-blog-img2.jpg" class="media-object">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                 <a href="blog-single.html">Dummy text of the Medical Post</a>
-                                 <span class="feed-date">28.02.15</span>                
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#" class="news-img">
-                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                 <a href="#">Dummy text of the Medical Post</a>
-                                 <span class="feed-date">28.02.15</span>                
-                                </div>
-                              </div>
-                            </li>                  
+                           </c:forEach>
+                                           
                           </ul>
                         </div>
                         <!-- Start sidebar widget -->
                         <div class="sidebar-widget">
                           <h3>Most Viewed</h3>
                           <ul class="popular-tab">
+                          <c:forEach items = "${ByLike}" var ="ByLike"> 
                             <li>
                               <div class="media">
                                 <div class="media-left">
@@ -451,55 +295,40 @@
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                 <a href="blog-single.html">Dummy text of the Medical Post</a>
-                                 <span class="feed-date">27.02.15</span>
+                                 <a href="#"><c:out value = "${ByLike.tieu_de }"/> </a>
+                                 <span class="feed-date"><c:out value = "${ByLike.id }"/></span>
                                 </div>
                               </div>
                             </li>
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#" class="news-img">
-                                    <img alt="img" src="resources/images/small-blog-img2.jpg" class="media-object">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                 <a href="blog-single.html">Dummy text of the Medical Post</a>
-                                 <span class="feed-date">28.02.15</span>                
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#" class="news-img">
-                                    <img alt="img" src="resources/images/small-blog-img1.jpg" class="media-object">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                 <a href="#">Dummy text of the Medical Post</a>
-                                 <span class="feed-date">28.02.15</span>                
-                                </div>
-                              </div>
-                            </li>                  
+                          </c:forEach>           
                           </ul>
                         </div>
                         <!-- Start sidebar widget -->
                         <div class="sidebar-widget">
                           <h3>Tags</h3>
                           <ul class="tag-nav">
-                            <li><a href="#">Dental</a></li>
-                            <li><a href="#">Surgery</a></li>
-                            <li><a href="#">Pediatric</a></li>
-                            <li><a href="#">Cardiac</a></li>
-                            <li><a href="#">Ophthalmology</a></li>
-                            <li><a href="#">Diabetes</a></li>
-                          </ul>
+                               <li><a href="#">OOP</a></li>
+                               <li><a href="#">Swing</a></li>
+                               <li><a href="#">.NET</a></li>
+                              <li><a href="#">PHP</a></li>
+                              <li><a href="#">Android</a></li>
+                              <li><a href="#">Spring</a></li>
+                              <li><a href="#">Database</a></li>
+                              <li><a href="#">JSP/Servlet</a></li>
+                              <li><a href="#">Cake</a></li>
+                              <li><a href="#">HTML/CSS</a></li>
+                  
+                </ul>
                         </div>
                         <!-- Start sidebar widget -->
                         <div class="sidebar-widget">
-                          <h3>Text Widget</h3>
-                          <p>This is text widget of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly <a href="#">believable</a></p>
+                          <h3>Post</h3>
+                          <p>Do you want to post something.<br/> <a href="#">Click here</a></p>
+                          <div class="readmore_area">
+                            <a href="<%=request.getContextPath()%>/post" data-hover="POST"><span>POST</span></a>                
+                          </div>
+                          
+                          
                         </div>
                         <!-- Start sidebar widget -->
                         <div class="sidebar-widget">
