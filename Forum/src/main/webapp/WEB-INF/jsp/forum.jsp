@@ -176,7 +176,9 @@
                                  </p></a>
                                  <ul class="tag-nav">
                                      <div class="col-md-8">
-                                     <li><a href="#">tag 1</a><a href="#">tag 2</a><a href="#">tag 3</a><a class="pull-right" href="#">readmore...</a></li>
+                                     <li><a href="#">tag 1</a><a href="#">tag 2</a><a href="#">tag 3</a>
+                                     <a class="pull-right" href="<%=request.getContextPath()%>/getbyId1?id=${traodoi.id}">readmore</a></li>
+                                     <c:out value="${findByID.id }"></c:out>
                                      </div>
                                   
                                 </ul>

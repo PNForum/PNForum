@@ -2,6 +2,7 @@ package com.pnv.dao;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,7 +28,7 @@ public class ForumDaoImpl implements ForumDao{
 	}
 
 	public BaiDangHoacTraoDoi findByDepartmentId(int id) {
-		BaiDangHoacTraoDoi bdhtd = null;
+		BaiDangHoacTraoDoi bdhtd;
 		
 		bdhtd =  (BaiDangHoacTraoDoi)sessionFactory.getCurrentSession().get(BaiDangHoacTraoDoi.class, id);
 		return bdhtd;
@@ -38,5 +39,12 @@ public class ForumDaoImpl implements ForumDao{
 		
 		return bdhtdList;
 	}
+	public BaiDangHoacTraoDoi findByBaiDangId(int id) {
+		BaiDangHoacTraoDoi bd = (BaiDangHoacTraoDoi) sessionFactory.getCurrentSession().get(BaiDangHoacTraoDoi.class, id);
+		return bd;
+
+	}
+	
+	
 
 }

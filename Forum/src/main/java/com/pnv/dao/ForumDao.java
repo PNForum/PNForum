@@ -8,8 +8,10 @@ public interface ForumDao {
 	public void saveOrUpdate(BaiDangHoacTraoDoi bdhtd);
 
     public void delete(BaiDangHoacTraoDoi bdhtd);
-
-    public BaiDangHoacTraoDoi findByDepartmentId(int id);
+    
+    public BaiDangHoacTraoDoi findByBaiDangId(int id);
     
 	 public List<BaiDangHoacTraoDoi> findAll();
-}
+	 
+	
+	}

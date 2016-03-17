@@ -263,9 +263,8 @@
                               <li><a href="#">Database</a></li>
                               <li><a href="#">JSP/Servlet</a></li>
                               <li><a href="#">Cake</a></li>
-                              <li><a href="#">HTML/CSS</a></li>
-                  
-                </ul>
+                              <li><a href="#">HTML/CSS</a></li>             
+               			 </ul>
                         </div>
                         <!-- Start sidebar widget -->
                         <div class="sidebar-widget">
