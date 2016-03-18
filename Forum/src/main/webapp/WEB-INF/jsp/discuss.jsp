@@ -84,7 +84,7 @@
           <div class="blog-breadcrumbs-area">
             <div class="container">
               <div class="blog-breadcrumbs-left">
-                <h2>Blog</h2>
+                <h2>Discuss</h2>
               </div>
               <div class="blog-breadcrumbs-right">
                 <ol class="breadcrumb">

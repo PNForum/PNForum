@@ -9,14 +9,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.pnv.dao.BinhLuanDao;
 import com.pnv.dao.ForumDao;
 import com.pnv.models.BaiDangHoacTraoDoi;
+import com.pnv.models.BinhLuan;
 
 @Controller
 public class ForumControllers {
 	
 	@Autowired
 	private ForumDao traoDoiDao;
+	
+	@Autowired
+	private BinhLuanDao binhLuanDao;
 	
 	 public ForumControllers() {
 	 }
@@ -29,13 +34,16 @@ public class ForumControllers {
 		 return "forum";
 	 		 
 	 }
-	 
-	 	        
+	 	 	        
 	 @RequestMapping(value = "/getbyId1", method = RequestMethod.GET)
 	    public String getProductByType(@RequestParam(value = "id", required = true) int id, ModelMap map) {
 	        BaiDangHoacTraoDoi baiDangListById = traoDoiDao.findByBaiDangId(id);
 	        map.addAttribute("baiDangListById", baiDangListById);
+	        
+	        List<BinhLuan> blList = binhLuanDao.getBinhLuan(id);
+	        map.put("blList", blList);	      
 	        return "detail_forum";
 	    }
+	 
 	 
 	 }

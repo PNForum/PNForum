@@ -110,7 +110,7 @@
           <div class="blog-breadcrumbs-area">
             <div class="container">
               <div class="blog-breadcrumbs-left">
-                <h2>Blog</h2>
+                <h2>Forum</h2>
               </div>
               <div class="blog-breadcrumbs-right">
                 <ol class="breadcrumb">
@@ -161,81 +161,29 @@
                               <h2><c:out value="${baiDangListById.tieu_de}"></c:out></h2>                              
                               <p><c:out value="${baiDangListById.noi_dung}"></c:out></p> 
                                                                     
-                              <!-- Start Comments  -->
+                             
+                               <!-- Start Comments  -->
                               <div class="comments-area">
-                                <h3 class="comments-title">5 Comments</h3>
+                                <h3 class="comments-title"><c:out value="${blList.size()}"></c:out> Comments</h3>
+                                
                                 <div class="comments">
                                   <ul class="commentlist">
+                                 <c:forEach items="${blList}" var="bl">
                                     <li>
                                       <div class="media">
                                         <div class="media-left">    
                                             <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
                                         </div>
                                         <div class="media-body">
-                                         <h4 class="author-name">Dr. Jack Johnson</h4>
-                                         <span class="comments-date"> May 16, 2015 / 10:29 am</span>
-                                         <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+                                         <h4 class="author-name"><c:out value="${bl.ten_nguoi_binh_luan}"></c:out></h4>                                         
+                                         <p><c:out value="${bl.noi_dung}"></c:out></p>
+                                         <span class="comments-date"><c:out value="${bl.ngay}"></c:out></span>
                                          <a class="reply-btn" href="#">Reply</a>
                                         </div>
                                       </div>
+                                      
                                     </li>
-                                    <li>
-                                      <div class="media">
-                                        <div class="media-left">    
-                                            <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
-                                        </div>
-                                        <div class="media-body">
-                                         <h4 class="author-name">Dr. Jack Johnson</h4>
-                                         <span class="comments-date"> May 16, 2015 / 10:29 am</span>
-                                         <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-                                         <a class="reply-btn" href="#">Reply</a>
-                                        </div>
-                                      </div>
-                                    </li>
-                                    <ul class="children">
-                                      <li class="author-comments">
-                                        <div class="media">
-                                          <div class="media-left">    
-                                              <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
-                                          </div>
-                                          <div class="media-body">
-                                           <h4 class="author-name">Dr. Jack Johnson</h4>
-                                           <span class="comments-date"> May 16, 2015 / 10:29 am</span>
-                                           <span class="author-tag">Author</span>
-                                           <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-                                           <a class="reply-btn" href="#">Reply</a>
-                                          </div>
-                                        </div>
-                                      </li>
-                                      <ul class="children">
-                                        <li>
-                                          <div class="media">
-                                            <div class="media-left">    
-                                                <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
-                                            </div>
-                                            <div class="media-body">
-                                             <h4 class="author-name">Dr. Jack Johnson</h4>
-                                             <span class="comments-date"> May 16, 2015 / 10:29 am</span>
-                                             <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-                                             <a class="reply-btn" href="#">Reply</a>
-                                            </div>
-                                          </div>
-                                        </li>
-                                      </ul>
-                                    </ul>
-                                    <li>
-                                      <div class="media">
-                                        <div class="media-left">    
-                                            <img alt="img" src="resources/images/doctor-2.jpg" class="media-object news-img">      
-                                        </div>
-                                        <div class="media-body">
-                                         <h4 class="author-name">Dr. Jack Johnson</h4>
-                                         <span class="comments-date"> May 16, 2015 / 10:29 am</span>
-                                         <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-                                         <a class="reply-btn" href="#">Reply</a>
-                                        </div>
-                                      </div>
-                                    </li>
+                                    </c:forEach>
                                   </ul>
                                 </div>
                               </div>
