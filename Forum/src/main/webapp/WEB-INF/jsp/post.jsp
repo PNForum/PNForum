@@ -103,7 +103,7 @@
 							
 							<script>
 								function myFunction() {
-								    alert("I am an alert box!");
+								    alert("Your post is are sucsessfull!");
 								}
 							</script>	
 						</button>
